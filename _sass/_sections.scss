@@ -1,22 +1,17 @@
 .b-content-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   border-bottom: 1px solid $gray_15;
 }
 
 .e-section-title {
   text-align: center;
-  padding: 60px;
+  margin: 60px;
   color: $black;
 }
 
-.e-separator {
-  margin-top: 40px;
-  padding-top: 40px;
-  border-top: 1px solid $gray_15;
-}
-
 .m-dark-panel {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: $primary-color;
   @include inner-shadow-big;
 }
@@ -30,10 +25,6 @@
     .e-section-title {
       font-size: 5rem;
       padding-top: 0;
-    }
-
-    .e-separator {
-      padding-top: 40px;
     }
   }
 
