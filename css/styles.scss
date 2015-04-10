@@ -38,3 +38,10 @@
 @import "team";
 @import "clients";
 @import "funders";
+
+// Foundation overrides.
+
+// This was making the page wider than the window.
+.row .row {
+  margin: 0; // 0px -0.9375rem;
+}
