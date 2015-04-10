@@ -8,3 +8,10 @@
     margin: 0 0 60px;
   }
 }
+
+// Large screens
+@media only screen and (min-width: 64.063em) {
+  .b-logos {
+    padding-bottom: 60px;
+  }
+}
