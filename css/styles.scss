@@ -39,9 +39,8 @@
 @import "clients";
 @import "funders";
 
-// Foundation overrides.
-
-// This was making the page wider than the window.
-.row .row {
-  margin: 0; // 0px -0.9375rem;
+@media only screen and (max-width: 53.125em) {
+  .show-for-850-up {
+    display: none;
+  }
 }
