@@ -27,12 +27,20 @@ $(function () {
 
   // Products slider.
   // @see http://unslider.com/
-  var slider = $('.b-slider').unslider({
-    dots: true,
-    keys: false,
-    fluid: true
-  });
+  var slider = $('.b-slider');
+  if (slider.unslider) {
+    slider.unslider({
+      dots: true,
+      keys: false,
+      fluid: true
+    });
+  }
 
   // Smooth scrolling.
-  $('nav').localScroll({hash: true});
+  var nav = $('nav');
+  if (nav.localScroll) {
+    nav.localScroll({
+      hash: true
+    });
+  }
 });
