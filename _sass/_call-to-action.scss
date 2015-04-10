@@ -38,21 +38,21 @@
     border-radius: 2px 0 0 2px;
 
     &::-webkit-input-placeholder { /* WebKit browsers */
-        color: $white;
+      color: $white;
     }
 
     &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color: $white;
-       opacity:  1;
+      color: $white;
+      opacity: 1;
     }
 
     &::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color: $white;
-       opacity:  1;
+      color: $white;
+      opacity: 1;
     }
 
     &:-ms-input-placeholder { /* Internet Explorer 10+ */
-       color: $white;
+      color: $white;
     }
   }
 
