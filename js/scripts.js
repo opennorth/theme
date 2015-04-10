@@ -6,13 +6,14 @@ $(function () {
   });
 
   // News clips.
-  $('.js-news-wrapper > h5:gt(0)').hide();
-  setInterval(function () {
-    $('.js-news-wrapper > h5:first').fadeOut(1000, function() {
-      $(this).next().fadeIn(1000);
-      $(this).appendTo('.js-news-wrapper');
-    });
-  }, 6000);
+  if ($('.js-news-wrapper h5').length > 1) {
+    $('.js-news-wrapper h5:gt(0)').hide();
+    setInterval(function () {
+      $('.js-news-wrapper h5:first').fadeOut(1000, function () {
+        $(this).next().fadeIn(1000).end().appendTo('.js-news-wrapper');
+      });
+    }, 6000);
+  }
 
   // Background images.
   /*
