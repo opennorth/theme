@@ -18,29 +18,29 @@
   }
 
   .b-backgrounds {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
 
-      .e-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-          opacity: 0;
+    .e-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
       background-size: cover;
-          -o-transition: opacity 4s ease;
-          -ms-transition: opacity 4s ease;
-          -moz-transition: opacity 4s ease;
-          transition: opacity 4s ease;
-      }
+      -o-transition: opacity 4s ease;
+      -ms-transition: opacity 4s ease;
+      -moz-transition: opacity 4s ease;
+      transition: opacity 4s ease;
+    }
 
     .m-img1 {
       background-image: url(../img/office.jpg);
     }
 
     .m-visible {
-        opacity: 1;
+      opacity: 1;
     }
   }
 }
