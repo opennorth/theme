@@ -29,12 +29,6 @@
 @import "logos";
 @import "blog";
 
-@media only screen and (max-width: 53.125em) {
-  .show-for-850-up {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 40em) {
   br {
     display: none;
