@@ -6,12 +6,19 @@
 
   .b-main-logo {
     margin: 0;
-    opacity: .8;
 
+    a,
     span {
+      opacity: .8;
       text-align: center;
       display: block;
       padding: 5px 10px 10px;
+    }
+
+    a {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
