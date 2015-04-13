@@ -8,11 +8,14 @@
     font-family: $sans-serif-font;
   }
 
-  h5 a {
+  h5 {
     color: $white_70;
-    display: block;
     font-size: .95rem;
-    letter-spacing: .3px;
+
+    a {
+      color: $white_70;
+      letter-spacing: .3px;
+    }
   }
 }
 
