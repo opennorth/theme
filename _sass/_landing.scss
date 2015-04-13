@@ -58,6 +58,10 @@
   .b-landing h1 {
     font-size: 2.5rem;
   }
+
+  #fr .b-landing h1 {
+    font-size: 1.85rem;
+  }
 }
 
 // Large screens
@@ -69,5 +73,9 @@
     h1 {
       font-size: 4rem;
     }
+  }
+
+  #fr .b-landing h1 {
+    font-size: 3rem;
   }
 }
