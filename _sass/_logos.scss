@@ -1,17 +1,10 @@
 .b-logos {
-  padding-bottom: 0;
+  padding-bottom: 20px; // 20px + 60px img margin-bottom = 80px
   text-align: center;
 
   img {
     max-height: 100px;
     max-width: 200px;
     margin: 0 0 60px;
-  }
-}
-
-// Large screens
-@media only screen and (min-width: 64.063em) {
-  .b-logos {
-    padding-bottom: 60px;
   }
 }
