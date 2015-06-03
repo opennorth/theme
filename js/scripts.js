@@ -16,12 +16,14 @@ $(function () {
   }
 
   // Background images.
+  /*
   setInterval(function () {
     var current = $('.e-bg.m-visible')
       , next = current.is(':last-child') ? $('.e-bg:first-child') : current.next();
     next.addClass('m-visible');
     current.removeClass('m-visible');
   }, 6500);
+  */
 
   // Products slider.
   // @see http://unslider.com/
