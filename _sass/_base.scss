@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
 
 
 h1, h2, h3 {
-  font-weight: 100;
+  font-weight: 400;
 }
 
 a {
@@ -40,4 +40,18 @@ a {
 
 .button:hover {
   background-color: $primary-color;
+}
+
+// Vertically middle align with table/cell
+.display-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .display-cell {
+        display: table-cell;
+        float: none!important;
+        vertical-align: middle;
+        height:100%;
+    }
 }

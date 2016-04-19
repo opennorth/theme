@@ -27,14 +27,20 @@
 // Footer instance
 .b-footer .b-social-media {
   background-color: transparent;
-  border: 1px solid $white_30;
+  border: none!important;
   color: $white_30;
+
+  @media only screen and (min-width: 40em) {
+    text-align: left;
+  }
+  @media only screen and (min-width: 48em) {
+    margin-right:6%;
+  }
 }
 
 .b-footer .b-social-media:hover {
   background-color: transparent;
   color: $white;
-  border-color: $white;
 }
 
 .b-social-media {

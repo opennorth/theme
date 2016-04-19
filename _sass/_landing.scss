@@ -1,30 +1,25 @@
 .b-landing {
+  border-bottom:0;
+  padding-bottom:0;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  box-shadow: inset 0 0 15px $black;
-
+  text-align:center;
+  
   h1 {
     color: $white;
-    line-height: 1.65;
-
-    span span {
-      background-color: $primary-color-dark-1_80;
-      padding: 0 10px;
-      line-height: .8;
+    display:inline-block;
+    line-height: 1.2;
+    text-align:left;
+    br{
+      display:initial!important;
     }
   }
 
   .b-backgrounds {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
 
     .e-bg {
-      position: absolute;
       width: 100%;
       height: 100%;
+      //padding-bottom:53%;
       opacity: 0;
       background-size: cover;
       background-position: center;
@@ -34,14 +29,33 @@
       transition: opacity 4s ease;
     }
 
-    .m-img1 {
-      background-color: #333;
-      // background-image: url(../img/office.jpg);
+    .m-img1{
+     // background-image:url('../img/map.jpg');
     }
 
     .m-visible {
       opacity: 1;
     }
+  }
+
+  .row-wrap{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  .row{
+    max-width:none;
+  }
+
+
+  .landing-left-column{
+    background-color: $primary-color-dark-1_80;
+    padding:5%;
+  }
+  .landing-right-column{
+    background-color: rgba(0,0,0,0.05);
   }
 }
 
@@ -49,15 +63,12 @@
   .b-landing h1 {
     font-size: 1.6875rem;
 
-    span {
-      padding: 0;
-    }
   }
 }
 
 @media only screen and (min-width: 40.063em) {
   .b-landing h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   #fr .b-landing h1 {
@@ -68,8 +79,9 @@
 // Large screens
 @media only screen and (min-width: 64.063em) {
   .b-landing {
-    padding-top: 80px;
-    padding-bottom: 110px;
+    .landing-left-column{
+      padding:80px;
+    }
 
     h1 {
       font-size: 4rem;
