@@ -9,6 +9,7 @@
     display:inline-block;
     line-height: 1.2;
     text-align:left;
+    text-transform:uppercase;
     br{
       display:initial!important;
     }
@@ -52,7 +53,7 @@
 
   .landing-left-column{
     background-color: $primary-color-dark-1_80;
-    padding:5%;
+    padding:4%;
   }
   .landing-right-column{
     background-color: rgba(0,0,0,0.05);

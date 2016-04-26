@@ -1,11 +1,14 @@
 .b-content-section {
   padding-bottom: 80px;
-  border-bottom: 1px solid $gray_15;
+}
+
+.b-text-block {
+    margin-bottom: 60px;
 }
 
 .e-section-title {
   text-align: center;
-  margin: 60px 0; // 60px + 20px h2 line-height = 80px
+  margin: 80px 0 40px;
   color: $black;
 }
 
@@ -13,20 +16,27 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: $primary-color;
-  @include inner-shadow-big;
 }
+
+//Medium screens
+@media only screen and (min-width: 40.063em) {
+  .b-text-block {
+    margin-bottom: 70px;
+    font-size:1.5rem;
+  }
+}
+
 
 // Large screens
 @media only screen and (min-width: 64.063em) {
   .b-content-section {
     .e-section-title {
-      font-size: 5rem;
+      font-size: 40px;
       padding-top: 0;
     }
   }
 
   .b-text-block {
-    margin-bottom: 60px;
 
     a:hover {
       background-color: $primary-color;

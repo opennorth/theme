@@ -2,7 +2,7 @@
   display: none;
 
   .e-news-item {
-    padding: 7px 0 0;
+    padding: 12px 0 0;
     font-weight: 600;
     font-family: $sans-serif-font;
   }
@@ -23,18 +23,10 @@
   .b-news {
     display: block;
     background-color: $primary-color-dark-1;
-    height: 42px;
+    height: 50px;
 
     .js-news-wrapper {
       position: relative;
-    }
-
-    .e-news-item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
     }
 
     h5 a:hover {
