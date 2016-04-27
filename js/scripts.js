@@ -33,9 +33,12 @@ $(function () {
       delay: 6000,
       dots: true,
       keys: false,
-      fluid: true
+      fluid:true,
+      animateHeight:true
     });
   }
+  $('.b-slider').height('auto');
+
 
   // Smooth scrolling.
   var nav = $('nav');
@@ -60,7 +63,7 @@ $(function () {
       });
       var maxHeight2 = 0;
       $("#products-columns .col-content").each(function(){
-        $(this).css("height", "auto");/* réinitialisation utile au resize de la fenêtre */
+        $(this).removeAttr("style");
       });
       $("#products-columns .col-content").each(function(){
          if ($(this).height() > maxHeight2) { maxHeight2 = $(this).height(); }
@@ -90,7 +93,7 @@ $(function () {
       });
       var maxHeight2 = 0;
       $("#services-columns .col-content").each(function(){
-        $(this).css("height", "auto");/* réinitialisation utile au resize de la fenêtre */
+        $(this).removeAttr("style");
       });
       $("#services-columns .col-content").each(function(){
          if ($(this).height() > maxHeight2) { maxHeight2 = $(this).height(); }

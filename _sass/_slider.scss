@@ -1,26 +1,95 @@
 .b-slider {
+  background-color:white;
+  overflow:auto;
   position: relative;
-  overflow: hidden;
-  padding-bottom: 35%;
+  min-height:700px;
+  @media only screen and (min-width: 50.063em) {
+      min-height:700px;
+}
 
   > ul {
     display: inline-block;
     margin: 0;
-    width: 300%;
   }
 
   .b-slider-item {
+
     list-style: none;
-    float: left;
-    width: percentage(1 /3);
+    float: left; 
+
+    .display-table{
+      @media only screen and (min-width: 50.063em) {
+        min-height:600px;
+      }
+    }
+  }
+
+  #slide-citizen{
+    background-color:#376BBA;
+    .slide-left-col{
+       background: url(../img/screenshots/slider-bg-test.png);    
+    }
+  }
+  #slide-represent{
+    background-color:#349CAA;
+    .slide-left-col{
+       background: url(../img/screenshots/slider-bg-test.png);    
+    }
+  } 
+  #slide-3{
+    background-color:$blue;
+    .slide-left-col{
+       background: url(../img/screenshots/slider-bg-test.png);    
+    }
+  }
+
+
+  .slide-left-col {
+    -ms-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size:cover;
+      background-repeat:no-repeat;
+    padding:10% 13%;
+    position:relative;
+
+
+    h2, p, a{
+      color:white;
+    }
+    p{
+      font-weight:400;
+      margin-top:20px;
+    }
+
+    p+p{
+      margin-top:40px;
+    }
+    a{
+      i{
+        font-size:90%;
+        margin-left:20px;
+      }
+    }
+  }
+  .slide-right-col{
+    position: relative;
+    img.screenshot{
+      position:absolute;
+        bottom:0;
+        left:-15%;
+    }
   }
 
   .dots {
+    background-color: #FFFFFF;
+    margin:0;
+    padding:20px 0;
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -30px;
-    margin-left: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     text-align: center;
 
     li {
@@ -38,6 +107,32 @@
       }
       &.active {
         background-color: $primary_color;
+      }
+    }
+  }
+}
+
+//large screens
+@media only screen and (max-width: 50em) {
+  .b-slider {
+
+    .display-table, .display-cell{
+      display:block!important;
+      height: auto!important;
+      width:100% !important;
+    }
+
+
+    .slide-left-col {
+      padding:10% 7%;
+
+    }
+    .slide-right-col{
+      text-align:center;
+      
+      img.screenshot{
+        position:initial;
+        width:80%;
       }
     }
   }

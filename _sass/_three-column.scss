@@ -4,26 +4,34 @@
 
 .col-header {
   color:white;
-  padding:60px 20px 30px;
+  padding:30px 20px 20px;
   text-align:center;
+
+  @media only screen and (min-width: 40.063em) {
+    padding:60px 20px 30px;
+  }
 
   .icon-wrap{
     vertical-align:bottom;
   }
 
   img{
-    margin-bottom:50px;
+    margin-bottom:30px;
+    @media only screen and (min-width: 40.063em) {
+      margin-bottom:50px;
+    }
   }
 
   h3{
     color:white;
     font-weight:bold;
-    font-size:1.6rem;
+    @media only screen and (min-width: 40.063em) {
+      font-size:1.6rem;
+    }
   }
 }
 .col-content {
-  background-color: white;
-  font-size:1.4em;
+  background-color: #FFFFFF;
   padding: 45px 7%;
 
   &.middle{
@@ -31,7 +39,9 @@
   }
 
   *{
-    font-size:1.2rem;
+    @media only screen and (min-width: 40.063em) {
+      font-size:1.2rem;
+    }
   }
 }
 
