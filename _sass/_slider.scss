@@ -27,19 +27,19 @@
   #slide-citizen{
     background-color:#376BBA;
     .slide-left-col{
-       background: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);    
     }
   }
   #slide-represent{
     background-color:#349CAA;
     .slide-left-col{
-       background: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);    
     }
   } 
   #slide-3{
     background-color:$blue;
     .slide-left-col{
-       background: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);    
     }
   }
 
@@ -50,7 +50,7 @@
       -moz-background-size: cover;
       -webkit-background-size: cover;
       background-size:cover;
-      background-repeat:no-repeat;
+      background-repeat:norepeat;
     padding:10% 13%;
     position:relative;
 

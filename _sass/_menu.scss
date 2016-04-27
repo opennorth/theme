@@ -56,9 +56,7 @@
   }
 }
 
-.b-main-menu .b-main-menu-container {
-  display: none;
-}
+
 
 // X-small screens
 @media only screen and (max-width: 20em) {
@@ -84,6 +82,9 @@
 @media only screen and (max-width: 64em) {
   .b-main-menu.m-active .b-main-menu-container {
     display: block;
+  }
+  .b-main-menu .b-main-menu-container {
+    display: none;
   }
 }
 

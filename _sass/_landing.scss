@@ -71,25 +71,17 @@
   .b-landing h1 {
     font-size: 3rem;
   }
-
-  #fr .b-landing h1 {
-    font-size: 1.85rem;
-  }
 }
 
 // Large screens
 @media only screen and (min-width: 64.063em) {
   .b-landing {
     .landing-left-column{
-      padding:80px;
+      padding:60px;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
     }
-  }
-
-  #fr .b-landing h1 {
-    font-size: 3rem;
   }
 }
