@@ -70,7 +70,7 @@ $(function () {
       });
       $("#products-columns .col-content").each(function(){
         $(this).height(maxHeight2);
-      });   
+      });
     }
     else{
       $("#products-columns .col-header").each(function(){
@@ -100,7 +100,7 @@ $(function () {
       });
       $("#services-columns .col-content").each(function(){
         $(this).height(maxHeight2);
-      });   
+      });
     }
     else{
       $("#services-columns .col-header").each(function(){

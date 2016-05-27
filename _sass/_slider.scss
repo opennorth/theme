@@ -15,7 +15,7 @@
   .b-slider-item {
 
     list-style: none;
-    float: left; 
+    float: left;
 
     .display-table{
       @media only screen and (min-width: 50.063em) {
@@ -27,19 +27,19 @@
   #slide-citizen{
     background-color:#376BBA;
     .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);
     }
   }
   #slide-represent{
     background-color:#349CAA;
     .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);
     }
-  } 
+  }
   #slide-3{
     background-color:$blue;
     .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);    
+       background-image: url(../img/screenshots/slider-bg-test.png);
     }
   }
 
@@ -129,7 +129,7 @@
     }
     .slide-right-col{
       text-align:center;
-      
+
       img.screenshot{
         position:initial;
         width:80%;
