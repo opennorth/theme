@@ -30,7 +30,7 @@ $(function () {
   var slider = $('.b-slider');
   if (slider.unslider) {
     slider.unslider({
-      delay: 100,
+      delay: 6000,
       dots: true,
       keys: false,
       fluid:true,
