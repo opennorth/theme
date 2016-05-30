@@ -111,10 +111,10 @@ $(function () {
       });
     }
   }
-  $(document).ready(
-    $(window).load(function () {
+  $(document).ready(function(){
+    $(window).load( function(){
       equalize();
     });
-  );
+  });
   window.addEventListener("resize", equalize);
 });
