@@ -30,7 +30,7 @@ $(function () {
   var slider = $('.b-slider');
   if (slider.unslider) {
     slider.unslider({
-      delay: 6000,
+      delay: 100,
       dots: true,
       keys: false,
       fluid:true,
@@ -111,8 +111,10 @@ $(function () {
       });
     }
   }
-  $(window).load(function () {
-    equalize();
-  });
+  $(document).ready(
+    $(window).load(function () {
+      equalize();
+    });
+  );
   window.addEventListener("resize", equalize);
 });
