@@ -111,10 +111,8 @@ $(function () {
       });
     }
   }
-  $(document).ready(
-    $(window).load(function () {
-      equalize();
-    });
-  );
+  $(document).ready(function(){
+    window.setTimeout(equalize, 0);
+  });
   window.addEventListener("resize", equalize);
 });
