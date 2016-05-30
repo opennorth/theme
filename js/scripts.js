@@ -112,9 +112,7 @@ $(function () {
     }
   }
   $(document).ready(function(){
-    $(window).load( function(){
-      equalize();
-    });
+    window.setTimeout(equalize, 0);
   });
   window.addEventListener("resize", equalize);
 });
