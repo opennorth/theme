@@ -5,17 +5,14 @@
   .b-main-logo {
     margin: 0;
 
-    a,
-    span {
-      text-align: center;
+    a, span {
       display: block;
       padding: 5px 10px 10px;
+      text-align: center;
     }
 
-    a {
-      &:hover {
-        opacity: 0.8;
-      }
+    a:hover {
+      opacity: 0.8;
     }
   }
 
@@ -79,7 +76,7 @@
 }
 
 // Not large screens
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width:1025px) {
   .b-main-menu.m-active .b-main-menu-container {
     display: block;
   }

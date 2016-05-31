@@ -7,23 +7,23 @@
 
 .b-text-block {
     margin-bottom: 60px;
-    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-      max-width:80%;
+    @media only screen and (min-width: 40.063em) and (max-width:1025px) {
       margin-left:auto;
       margin-right:auto;
+      max-width:80%;
     }
 }
 
 .e-section-title {
-  text-align: center;
-  margin: 80px 0 40px;
   color: $black;
+  margin: 80px 0 40px;
+  text-align: center;
 }
 
 .m-dark-panel {
+  background-color: $primary-color;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: $primary-color;
 }
 
 .border-bottom:after{
@@ -37,8 +37,8 @@
 //Medium screens
 @media only screen and (min-width: 40.063em) {
   .b-text-block {
-    margin-bottom: 70px;
     font-size:1.5rem;
+    margin-bottom: 70px;
   }
 
   .e-section-title.big{
@@ -60,15 +60,11 @@
   }
 
   .b-text-block {
-
     a:hover {
       background-color: $primary-color;
       color: $white;
-    }
-
-    a:hover {
-      padding: 0 5px;
       margin: 0 -5px;
+      padding: 0 5px;
     }
   }
 

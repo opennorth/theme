@@ -80,7 +80,7 @@ $(function () {
         $(this).removeAttr("style");
       });
     }
-    if (document.body.clientWidth >= 1024) {
+    if (document.body.clientWidth > 1025) {
       var maxHeight = 0;
       $("#services-columns .col-header").each(function(){
         $(this).removeAttr("style");
@@ -112,7 +112,7 @@ $(function () {
     }
   }
   $(document).ready(function(){
-    window.setTimeout(equalize, 0);
+    window.setTimeout(equalize, 100);
   });
   window.addEventListener("resize", equalize);
 });

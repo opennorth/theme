@@ -4,29 +4,69 @@
 
 .col-header {
   color:white;
-  padding:30px 20px 20px;
+  min-height: 295px;
+  padding:30px 20px;
   text-align:center;
 
-  @media only screen and (min-width: 40.063em) {
-    padding:60px 20px 30px;
-  }
-
-  .icon-wrap{
-    vertical-align:bottom;
-  }
-
-  img{
-    margin-bottom:30px;
-    @media only screen and (min-width: 40.063em) {
-      margin-bottom:50px;
+  #services-columns & {
+    @media only screen and (max-width:1025px) {
+      height: auto !important;
+      min-height: auto;
+      padding: 2.5em 5%;
     }
   }
 
-  h3{
+  #products-columns & {
+    @media only screen and (max-width:1025px) {
+      min-height: 320px;
+    }
+    @media only screen and (max-width:641px) {
+      height: auto !important;
+      min-height: auto;
+      padding: 2.5em 5%;
+    }
+  }
+
+  .icon-wrap {
+    height: 150px;
+
+    #services-columns & {
+      @media only screen and (max-width:1025px) {
+        height: auto;
+      }
+    }
+    #products-columns & {
+      @media only screen and (max-width:641px) {
+        height: auto;
+      }
+    }
+
+    .display-cell {
+      vertical-align: middle;
+    }
+  }
+
+  img {
+    max-height: 110px;
+  }
+
+  h3 {
     color:white;
     font-weight:bold;
+    margin: 0.5em 0 1em;
     @media only screen and (min-width: 40.063em) {
       font-size:1.6rem;
+    }
+
+    #services-columns & {
+      @media only screen and (max-width:1025px) {
+        margin: 1.2em 0 0;
+      }
+    }
+    #products-columns & {
+      @media only screen and (max-width:641px) {
+        margin: 1.2em 0 0;
+      }
     }
   }
 }
