@@ -11,7 +11,7 @@
   #services-columns & {
     @media only screen and (max-width:1025px) {
       height: auto !important;
-      min-height: auto;
+      min-height: 0;
       padding: 2.5em 5%;
     }
   }
@@ -22,7 +22,7 @@
     }
     @media only screen and (max-width:641px) {
       height: auto !important;
-      min-height: auto;
+      min-height: 0;
       padding: 2.5em 5%;
     }
   }
