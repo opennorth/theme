@@ -9,7 +9,10 @@
 
   .js-news-wrapper {
     @media only screen and (min-width: 64.063em) {
+      max-width: 900px;
+      overflow: hidden;
       position: relative;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
   }
