@@ -89,24 +89,23 @@
   .col-content {
     ul {
       list-style:none;
-
       @media only screen and (min-width: 64.063em){
-        margin-bottom: 35px;
-        margin-top: 35px;
+        margin-bottom: 30px;
+        margin-top: 30px;
       }
 
       li{
         line-height:1.1;
         margin-left:1em;
-        padding: 3px 0;
+        padding: 5px 0;
       }
 
       li:before {
+        color: $blue;
         content: '>';
-        color:$blue;
+        float: left;
         font-size: 1.5rem;
-        margin-right:10px;
-        margin-left:-1em;
+        margin: -4px 10px 0 -1em;
       }
     }
   }
