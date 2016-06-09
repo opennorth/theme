@@ -28,16 +28,27 @@ $(function () {
   // Products slider.
   // @see http://unslider.com/
   var slider = $('.b-slider');
+
   if (slider.unslider) {
+    var sliderData = slider.data('unslider');
+
     slider.unslider({
+      animateHeight:true,
+      arrows: false,
+      autoplay: true,
       delay: 6000,
       dots: true,
-      keys: false,
       fluid:true,
-      animateHeight:true
+      keys: false,
+      activeClass: 'active'
+    });
+
+    // Resize slider on window resize
+    $( window ).resize(function() {
+        var active_slide_height = slider.find('li.active').outerHeight();
+        slider.height(active_slide_height);
     });
   }
-  $('.b-slider').height('auto');
 
 
   // Smooth scrolling.
