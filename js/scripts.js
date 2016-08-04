@@ -33,9 +33,12 @@ $(function () {
       delay: 6000,
       dots: true,
       keys: false,
-      fluid: true
+      fluid:true,
+      animateHeight:true
     });
   }
+  $('.b-slider').height('auto');
+
 
   // Smooth scrolling.
   var nav = $('nav');
@@ -44,4 +47,70 @@ $(function () {
       hash: true
     });
   }
+
+  // equalize elements
+  function equalize(){
+    if (document.body.clientWidth >= 641) {
+      var maxHeight = 0;
+      $("#products-columns .col-header").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#products-columns .col-header").each(function(){
+         if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+      });
+      $("#products-columns .col-header").each(function(){
+        $(this).height(maxHeight);
+      });
+      var maxHeight2 = 0;
+      $("#products-columns .col-content").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#products-columns .col-content").each(function(){
+         if ($(this).height() > maxHeight2) { maxHeight2 = $(this).height(); }
+      });
+      $("#products-columns .col-content").each(function(){
+        $(this).height(maxHeight2);
+      });
+    }
+    else{
+      $("#products-columns .col-header").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#products-columns .col-content").each(function(){
+        $(this).removeAttr("style");
+      });
+    }
+    if (document.body.clientWidth >= 1024) {
+      var maxHeight = 0;
+      $("#services-columns .col-header").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#services-columns .col-header").each(function(){
+         if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+      });
+      $("#services-columns .col-header").each(function(){
+        $(this).height(maxHeight);
+      });
+      var maxHeight2 = 0;
+      $("#services-columns .col-content").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#services-columns .col-content").each(function(){
+         if ($(this).height() > maxHeight2) { maxHeight2 = $(this).height(); }
+      });
+      $("#services-columns .col-content").each(function(){
+        $(this).height(maxHeight2);
+      });
+    }
+    else{
+      $("#services-columns .col-header").each(function(){
+        $(this).removeAttr("style");
+      });
+      $("#services-columns .col-content").each(function(){
+        $(this).removeAttr("style");
+      });
+    }
+  }
+  equalize();
+  window.addEventListener("resize", equalize);
 });

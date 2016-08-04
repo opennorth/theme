@@ -1,9 +1,13 @@
+#about{
+	padding-bottom:0;
+}
+
 .b-content-section.b-people {
   padding-bottom: 50px; // 50px + 30px .b-card margin-bottom = 80px
 }
 
 .b-card.m-team {
-  height: 390px;
+  height: 440px;
   background-color: $white;
   position: relative;
 }

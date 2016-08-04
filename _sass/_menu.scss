@@ -1,15 +1,12 @@
 .b-main-menu {
-  background-color: $black;
   position: relative;
   z-index: 100;
-  @include dropshadow-big;
 
   .b-main-logo {
     margin: 0;
 
     a,
     span {
-      opacity: .8;
       text-align: center;
       display: block;
       padding: 5px 10px 10px;
@@ -17,7 +14,7 @@
 
     a {
       &:hover {
-        opacity: 1;
+        opacity: 0.8;
       }
     }
   }
@@ -29,17 +26,16 @@
     top: 25px;
 
     i {
-      color: $white_80;
+      color: $black;
 
       &:hover {
-        color: $white;
+        color: $gray_60;
       }
     }
   }
 
-  .e-menu-item,
-  .e-language-switcher {
-    color: $white_80;
+  .e-menu-item {
+    color: $black;
     font-family: $title-font;
     font-weight: 400;
     display: block;
@@ -48,34 +44,19 @@
   }
 
   .e-menu-item:hover {
-    background-color: $white_10;
-    color: $white;
+    color: $gray_60;
     @include transition;
   }
 
-  .e-menu-item span,
-  .e-language-switcher {
+  .e-menu-item span {
     display: block;
     margin: 0 40px;
     padding: 15px;
     @include chizel-line;
   }
-
-  .e-language-switcher {
-    > a {
-      color: $white_80;
-      border-left: 1px solid $white_10;
-
-      &:first-child {
-        border-left: 0;
-      }
-    }
-  }
 }
 
-.b-main-menu .b-main-menu-container {
-  display: none;
-}
+
 
 // X-small screens
 @media only screen and (max-width: 20em) {
@@ -102,11 +83,8 @@
   .b-main-menu.m-active .b-main-menu-container {
     display: block;
   }
-
-  .e-language-switcher:hover {
-    background-color: $white_10;
-    color: $white;
-    @include transition;
+  .b-main-menu .b-main-menu-container {
+    display: none;
   }
 }
 
@@ -136,22 +114,14 @@
       flex: 1;
     }
 
-    .e-language-switcher {
-      padding: 20px;
 
-      a {
-        font-size: .9rem;
-      }
-    }
 
     .b-main-menu-list {
       flex: 1;
     }
 
     .e-menu-item {
-      font-size: 1.1rem;
       display: inline-block;
-      border-left: 1px solid $white_10;
     }
 
     .e-menu-item span {
@@ -159,24 +129,7 @@
       padding: 25px 20px;
     }
 
-    .e-menu-item:last-of-type {
-      border-right: 1px solid $white_10;
-    }
-
-    .e-language-switcher {
-      > a {
-        padding: 5px 15px;
-
-        &:hover {
-          background-color: $white_10;
-          color: $white;
-          @include transition;
-        }
-      }
-    }
-
-    .e-menu-item span,
-    .e-language-switcher {
+    .e-menu-item span {
       border-bottom: 0;
       box-shadow: none;
     }
@@ -184,8 +137,7 @@
 }
 
 .lt-ie10 .b-main-menu {
-  .e-menu-item,
-  .e-language-switcher {
+  .e-menu-item {
     font-family: sans-serif;
   }
 }
