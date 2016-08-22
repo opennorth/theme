@@ -1,11 +1,6 @@
 .b-slider {
   background-color:white;
-  overflow:auto;
   position: relative;
-  min-height:700px;
-  @media only screen and (min-width: 50.063em) {
-      min-height:700px;
-}
 
   > ul {
     display: inline-block;
@@ -13,126 +8,112 @@
   }
 
   .b-slider-item {
-
-    list-style: none;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size:cover;
+    background-repeat:norepeat;
     float: left;
+    list-style: none;
 
-    .display-table{
+    .display-table {
       @media only screen and (min-width: 50.063em) {
-        min-height:600px;
+        height:600px;
+      }
+      @media screen and (min-width: 1200px) and (min-height: 750px) {
+        height:650px;
       }
     }
   }
 
   #slide-citizen{
     background-color:#376BBA;
-    .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);
-    }
+    background-image: url(../img/screenshots/slider-bg-test.png);
   }
   #slide-represent{
     background-color:#349CAA;
-    .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);
-    }
+    background-image: url(../img/screenshots/slider-bg-test.png);
   }
-  #slide-3{
+  #slide-3 {
     background-color:$blue;
-    .slide-left-col{
-       background-image: url(../img/screenshots/slider-bg-test.png);
-    }
+    background-image: url(../img/screenshots/slider-bg-test.png);
   }
 
+  .display-table, .display-cell{
+    @media only screen and (max-width: 50em) {
+      display:block!important;
+      height: auto!important;
+      width:100% !important;
+    }
+  }
 
   .slide-left-col {
-    -ms-background-size: cover;
-      -o-background-size: cover;
-      -moz-background-size: cover;
-      -webkit-background-size: cover;
-      background-size:cover;
-      background-repeat:norepeat;
-    padding:10% 13%;
+    padding:10% 5% 10% 13%;
     position:relative;
+    @media only screen and (max-width: 50em) {
+      padding:10% 7% 5%;
+    }
 
-
-    h2, p, a{
+    h2, p, a {
       color:white;
     }
-    p{
+    p {
       font-weight:400;
       margin-top:20px;
+
+      & +p {
+        margin-top:40px;
+      }
     }
 
-    p+p{
-      margin-top:40px;
-    }
-    a{
-      i{
+    a {
+      i {
         font-size:90%;
         margin-left:20px;
       }
     }
   }
+
   .slide-right-col{
     position: relative;
+    text-align:center;
+    @media only screen and (max-width: 50em) {
+      padding: 0 7% 10%;
+    }
+    
     img.screenshot{
-      position:absolute;
-        bottom:0;
-        left:-15%;
-    }
-  }
-
-  .dots {
-    background-color: #FFFFFF;
-    margin:0;
-    padding:20px 0;
-    position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    text-align: center;
-
-    li {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin: 0 7px;
-      text-indent: -999em;
-      background-color: $gray_15;
-      border-radius: 50%;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $gray_45;
-      }
-      &.active {
-        background-color: $primary_color;
-      }
-    }
-  }
-}
-
-//large screens
-@media only screen and (max-width: 50em) {
-  .b-slider {
-
-    .display-table, .display-cell{
-      display:block!important;
-      height: auto!important;
-      width:100% !important;
-    }
-
-
-    .slide-left-col {
-      padding:10% 7%;
-
-    }
-    .slide-right-col{
-      text-align:center;
-
-      img.screenshot{
-        position:initial;
+      margin: 0 auto;
+      width: 400px;
+      @media only screen and (max-width: 50em) {
         width:80%;
+      }
+    }
+  }
+
+  & + .unslider-nav {
+    background-color: white;
+
+    ol {
+      padding: 1.8em 0;
+      @media only screen and (max-width: 50em) {
+        padding: 1.5em 0;
+      }
+
+      li {
+        background-color: $gray_15;
+        border: none;
+        height: 10px;
+        margin: 0 7px;
+        width: 10px;
+
+        &:hover {
+          background-color: $gray_45;
+        }
+
+        &.active {
+          background-color: $primary_color;
+        }
       }
     }
   }

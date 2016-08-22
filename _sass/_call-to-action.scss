@@ -1,10 +1,13 @@
 .b-call-to-action {
   .e-call-to-action-title {
-    text-align: center;
     color: $white;
     font-size:2rem;
     font-weight: 500;
     line-height:1;
+    text-align: center;
+    @media only screen and (max-width:1025px) {
+        margin-bottom:40px;
+    }
   }
 
   .button {
@@ -14,9 +17,9 @@
     color: $white;
     font-weight: 500;
     letter-spacing: 2px;
+    margin-bottom:0;
     padding-left: 16px;
     padding-right: 16px;
-    margin-bottom:0;
     text-transform: none!important;
   }
 
@@ -26,19 +29,17 @@
 }
 
 .b-subscribe {
-
   padding: 120px 10px !important;
 
-
   input[type="email"] {
+    background-color: transparent;
     border: 1px solid $white_30;
     border-right: 0;
-    background-color: transparent;
+    color: $white_50;
     font-family: $sans-serif-font;
     font-size: 0.875rem;
-    letter-spacing: 2px;
     font-weight: 400;
-    color: $white_50;
+    letter-spacing: 2px;
     margin-bottom:0;
 
     &::-webkit-input-placeholder { /* WebKit browsers */
@@ -69,9 +70,3 @@
   }
 }
 
-//Medium down
-@media only screen and (max-width: 64em) {
-  .e-call-to-action-title {
-    margin-bottom:40px;
-  }
-}
