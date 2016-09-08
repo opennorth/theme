@@ -4,25 +4,25 @@
   h2 {
     text-align: center;
   }
+
+  br {
+    @media only screen and (min-width: 20.063em) and (max-width:1025px) {
+      display: none;
+    }
+  }
 }
 
 .b-circle {
-  background-color: #ddd;
-  overflow: hidden;
-  width: 80%;
-  height: 0;
-  padding-bottom: 80%;
-  margin: 20px auto;
   border-radius: 50%;
-}
+  background-color: #ddd;
+  height: 0;
+  margin: 20px auto;
+  overflow: hidden;
+  padding-bottom: 80%;
+  width: 80%;
 
-// Small screens
-@media only screen and (min-width: 20.063em) and (max-width: 64em) {
-  .b-services br {
-    display: none;
-  }
-  .b-circle {
-    width: 232px;
+  @media only screen and (min-width: 20.063em) and (max-width:1025px) {
     padding-bottom: 232px;
+    width: 232px;
   }
 }

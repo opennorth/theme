@@ -2,21 +2,13 @@
 ---
 // Basic blocks
 @import "variables";
+@import "vendor";
 @import "base";
 @import "cards";
 @import "social-media";
 @import "sections";
 @import "slider";
 @import "three-column";
-
-.img-placeholder {
-  background-color: #aaa;
-  width: 100%;
-  height: 0;
-  padding-bottom: 60%;
-  margin: 20px 0;
-  border: 1px solid #999;
-}
 
 // Content blocks
 @import "footer";
@@ -29,9 +21,3 @@
 @import "team";
 @import "logos";
 @import "blog";
-
-@media only screen and (max-width: 40em) {
-  br {
-    display: none;
-  }
-}

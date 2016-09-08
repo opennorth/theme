@@ -4,29 +4,69 @@
 
 .col-header {
   color:white;
-  padding:30px 20px 20px;
+  min-height: 295px;
+  padding:30px 20px;
   text-align:center;
 
-  @media only screen and (min-width: 40.063em) {
-    padding:60px 20px 30px;
-  }
-
-  .icon-wrap{
-    vertical-align:bottom;
-  }
-
-  img{
-    margin-bottom:30px;
-    @media only screen and (min-width: 40.063em) {
-      margin-bottom:50px;
+  #services-columns & {
+    @media only screen and (max-width:1025px) {
+      height: auto !important;
+      min-height: 0;
+      padding: 2.5em 5%;
     }
   }
 
-  h3{
+  #products-columns & {
+    @media only screen and (max-width:1025px) {
+      min-height: 320px;
+    }
+    @media only screen and (max-width:641px) {
+      height: auto !important;
+      min-height: 0;
+      padding: 2.5em 5%;
+    }
+  }
+
+  .icon-wrap {
+    height: 150px;
+
+    #services-columns & {
+      @media only screen and (max-width:1025px) {
+        height: auto;
+      }
+    }
+    #products-columns & {
+      @media only screen and (max-width:641px) {
+        height: auto;
+      }
+    }
+
+    .display-cell {
+      vertical-align: middle;
+    }
+  }
+
+  img {
+    max-height: 110px;
+  }
+
+  h3 {
     color:white;
     font-weight:bold;
+    margin: 0.5em 0 1em;
     @media only screen and (min-width: 40.063em) {
       font-size:1.6rem;
+    }
+
+    #services-columns & {
+      @media only screen and (max-width:1025px) {
+        margin: 1.2em 0 0;
+      }
+    }
+    #products-columns & {
+      @media only screen and (max-width:641px) {
+        margin: 1.2em 0 0;
+      }
     }
   }
 }
@@ -38,7 +78,7 @@
     background-color:$gray;
   }
 
-  *{
+  * {
     @media only screen and (min-width: 40.063em) {
       font-size:1.2rem;
     }
@@ -49,24 +89,23 @@
   .col-content {
     ul {
       list-style:none;
-
       @media only screen and (min-width: 64.063em){
-        margin-bottom: 35px;
-        margin-top: 35px;
+        margin-bottom: 30px;
+        margin-top: 30px;
       }
 
       li{
         line-height:1.1;
         margin-left:1em;
-        padding: 3px 0;
+        padding: 5px 0;
       }
 
       li:before {
+        color: $blue;
         content: '>';
-        color:$blue;
+        float: left;
         font-size: 1.5rem;
-        margin-right:10px;
-        margin-left:-1em;
+        margin: -4px 10px 0 -1em;
       }
     }
   }
