@@ -1,29 +1,33 @@
 .b-main-menu {
+  display: block;
+  clear: both;
   position: relative;
+  width: 100%;
   z-index: 100;
+  @media only screen and (min-width: 64.063em) {
+    overflow: hidden;
+  }
 
-  .b-main-logo {
-    margin: 0;
-
-    a,
-    span {
-      text-align: center;
+  .e-main-menu-wrapper {
+    display: table;
+    margin: 0 auto;
+    max-width: 64.063em;
+    width: 100%;
+    @media only screen and (max-width:1025px) {
       display: block;
-      padding: 5px 10px 10px;
-    }
-
-    a {
-      &:hover {
-        opacity: 0.8;
-      }
+      max-width: 100%;
     }
   }
 
   .e-main-menu-trigger {
-    z-index: 900;
+    display: none;
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 22px;
+    z-index: 900;
+    @media only screen and (max-width:1025px) {
+      display: block;
+    }
 
     i {
       color: $black;
@@ -33,111 +37,98 @@
       }
     }
   }
+  
+  .b-main-logo {
+    margin: 0;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    width: 30%;
+    @media only screen and (max-width: 40em) {
+      font-size: 2.75rem;
+    }
+    @media only screen and (max-width:1025px) {
+      display: initial;
+      width: auto;
+    }
 
-  .e-menu-item {
-    color: $black;
-    font-family: $title-font;
-    font-weight: 400;
-    display: block;
-    text-align: center;
-    font-size: 1.4rem;
-  }
+    a, span {
+      display: inline-block;
+      padding: 5px 10px;
+      @media only screen and (max-width:1025px) {
+        display: block;
+        padding: 5px 10px 10px;
+        text-align: center;
+      }
+    }
 
-  .e-menu-item:hover {
-    color: $gray_60;
-    @include transition;
-  }
+    a:hover {
+      opacity: 0.8;
+    }
 
-  .e-menu-item span {
-    display: block;
-    margin: 0 40px;
-    padding: 15px;
-    @include chizel-line;
-  }
-}
-
-
-
-// X-small screens
-@media only screen and (max-width: 20em) {
-  .b-main-menu {
-    .b-main-logo {
-      span {
+    span {
+      @media only screen and (max-width: 20em) {
         text-align: left;
       }
     }
   }
-}
 
-// Small screens
-@media only screen and (max-width: 40em) {
-  .b-main-menu {
-    .b-main-logo {
-      font-size: 2.75rem;
-    }
-  }
-}
-
-// Not large screens
-@media only screen and (max-width: 64em) {
-  .b-main-menu.m-active .b-main-menu-container {
-    display: block;
-  }
-  .b-main-menu .b-main-menu-container {
-    display: none;
-  }
-}
-
-// Large screens
-@media only screen and (min-width: 64.063em) {
-  .b-main-menu {
-    overflow: hidden;
-
-    .e-main-menu-wrapper {
-      max-width: 64.063em;
-      margin: 0 auto;
-      display: flex;
-    }
-
-    .b-main-logo {
-      margin: 0 30px 0 0;
-      float: left;
-    }
-
-    .e-main-menu-trigger {
+  .b-main-menu-container {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    @media only screen and (max-width:1025px) {
       display: none;
     }
+  }
 
-    .b-main-menu-container {
-      display: flex;
-      text-align: right;
-      flex: 1;
-    }
-
-
-
-    .b-main-menu-list {
-      flex: 1;
-    }
-
-    .e-menu-item {
-      display: inline-block;
-    }
-
-    .e-menu-item span {
-      margin: 0;
-      padding: 25px 20px;
-    }
-
-    .e-menu-item span {
-      border-bottom: 0;
-      box-shadow: none;
+  &.m-active .b-main-menu-container {
+    @media only screen and (max-width:1025px) {
+      display: block;
     }
   }
-}
 
-.lt-ie10 .b-main-menu {
+  .b-main-menu-list {
+    @media only screen and (min-width: 1050px) {
+      margin-right: -20px;
+    }
+  }
+
   .e-menu-item {
+    color: $black;
+    display: inline-block;
+    font-family: $title-font;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    @media only screen and (max-width:1025px) {
+      display: block;
+    }
+
+    &:hover {
+      color: $gray_60;
+      @include transition;
+    }
+
+    span {
+      display: block;
+      margin: 0 40px;
+      padding: 15px;
+      @include chizel-line;
+      @media only screen and (min-width: 64.063em) {
+        border-bottom: 0;
+        box-shadow: none;
+        margin: 0;
+        padding: 25px 20px;
+      }
+      @media only screen and (max-width:320px) {
+        margin: 0;
+      }
+    }
+  }
+
+  // IE10 Fix
+  &.lt-ie10 .e-menu-item {
     font-family: sans-serif;
   }
 }

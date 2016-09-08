@@ -28,16 +28,27 @@ $(function () {
   // Products slider.
   // @see http://unslider.com/
   var slider = $('.b-slider');
+
   if (slider.unslider) {
+    var sliderData = slider.data('unslider');
+
     slider.unslider({
+      animateHeight:true,
+      arrows: false,
+      autoplay: true,
       delay: 6000,
       dots: true,
-      keys: false,
       fluid:true,
-      animateHeight:true
+      keys: false,
+      activeClass: 'active'
+    });
+
+    // Resize slider on window resize
+    $( window ).resize(function() {
+        var active_slide_height = slider.find('li.active').outerHeight();
+        slider.height(active_slide_height);
     });
   }
-  $('.b-slider').height('auto');
 
 
   // Smooth scrolling.
@@ -80,7 +91,7 @@ $(function () {
         $(this).removeAttr("style");
       });
     }
-    if (document.body.clientWidth >= 1024) {
+    if (document.body.clientWidth > 1025) {
       var maxHeight = 0;
       $("#services-columns .col-header").each(function(){
         $(this).removeAttr("style");
@@ -111,6 +122,8 @@ $(function () {
       });
     }
   }
-  equalize();
+  $(document).ready(function(){
+    window.setTimeout(equalize, 100);
+  });
   window.addEventListener("resize", equalize);
 });
