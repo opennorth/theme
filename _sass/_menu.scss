@@ -107,6 +107,7 @@
         border-top: 1px solid #ccc;
         display: block;
         @media only screen and (min-width:1026px) {
+          border: none;
           display: inline-block;
           float: left;
         }
