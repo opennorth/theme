@@ -1,0 +1,112 @@
+.open-cities-landing {
+  .e-bg img {
+    width: 100%;
+  }
+}
+
+#products-columns.open-cities {
+  .col-header {
+    min-height: 0;
+  }
+  h3 {
+    margin: 0.5em 0;
+  }
+
+  .col-content ul li + li {
+    margin-top: 1em;
+  }
+}
+
+#what-we-do.open-cities {
+  padding-bottom: 1px;
+
+  .entry-wrap {
+    padding: 5em 0;
+  }
+  p {
+    margin: 0 auto;
+  }
+  * + p {
+    margin-top: 2em;
+  }
+}
+
+.single-expert {
+  padding: 2em 0;
+  @media only screen and (min-width:642px) {
+    padding: 3em 0;
+  }
+
+  .image {
+    padding: 0.5em 0 0;
+    text-align: center;
+  }
+
+  .right-col {
+    @media only screen and (max-width:641px) {
+      padding-top: 1.5em;
+      text-align: center;
+    }
+    @media only screen and (min-width:642px) {
+      padding-left: 1.5em;
+    }
+    @media only screen and (min-width:1026px) {
+      padding-left: 3em;
+    }
+  }
+
+  h3 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1.4em;
+    line-height: 1.4;
+    margin: 0.05em 0 0;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 1em 0 0;
+    @media only screen and (min-width:1026px) {
+      margin-top: 1.5em;
+    }
+  }
+
+  & + .single-expert {
+    border-top: 1px solid #dedcdc;
+  }
+}
+.open-cities-partners {
+  h2 {
+    margin: 0 0 1em;
+  }
+}
+.partner-logos {
+  padding: 2em 0 0;
+  text-align: center;
+  
+  .columns {
+    @media only screen and (min-width:1026px) {
+      padding: 0 1.5em;
+    }
+  }
+
+  img {
+    max-height: none;
+    max-width: 100%;
+  }
+}
+.open-cities-cta .button {
+    background-color: #c60000;
+    color: white;
+    margin-bottom: 0;
+    padding: 1em 2em;
+
+    &:hover {
+      background-color: #333;
+    }
+}
