@@ -25,3 +25,11 @@
 
 // Pages
 @import "open-cities";
+
+// Add to scss at next compile:
+
+picture {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
