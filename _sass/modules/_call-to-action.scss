@@ -1,0 +1,59 @@
+// Home Page - call to action section
+.b-content-section {
+  .banner {
+    background-color: rgba(150, 0, 0, 0.7);
+    margin-bottom: 1.5em;
+    h2 {
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+  }
+}
+
+#mission {
+  p {
+    font-size: 1.4em;
+  }
+}
+
+.call-to-action {
+  @include chizel-line;
+  margin-bottom: 3em;
+
+  .action-box {
+    margin: 3em 0 1.5em;
+    @media screen and (min-width: 40.063em) {
+      display: flex;
+      align-items: center;
+    }
+    .button {
+      display: block;
+      width: 96%;
+      margin: 0 auto 1em;
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-top: 2em;
+    .fa {
+    	padding: .25em;
+    	background: grey;
+    	border-radius: 4px;
+    	color: #fff;
+    	width: 48px;
+    	height: 48px;
+      &.fa-facebook {
+        font-size: 2.54em;
+      }
+      &:hover,
+      &:active {
+        background-color: $teal_70;
+      }
+    }
+  }
+}
+
+@screen and min-width

@@ -1,8 +1,28 @@
 .b-content-section {
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
-#what-we-do, #expertise{
+
+#what-we-do,
+#expertise{
   padding-bottom:20px;
+}
+
+#impact .row:first-child,
+#projects .row:first-child,
+#reports .row:first-child,
+#resources .row:first-child {
+  padding-top: 2em;
+}
+
+#learn-more a {
+  padding: 0.5em 1em;
+  background-color: rgba(150, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: 400;
+  &:hover {
+    background-color: rgba(150, 0, 0, 0.5);
+    color: #ffffff;
+  }
 }
 
 .b-text-block {
@@ -16,7 +36,7 @@
 
 .e-section-title {
   color: $black;
-  margin: 80px 0 40px;
+  margin: 20px 0 40px;
   text-align: center;
 }
 
@@ -34,6 +54,25 @@
   width:70%;
 }
 
+.b-mission {
+  	padding:40px 10px;
+
+  	p{
+  		margin-bottom:0;
+  	}
+}
+
+.col-header {
+  padding: 0;
+  img {
+    max-height: inherit;
+  }
+}
+.col-content {
+  padding: 0 7% 20px;
+}
+
+
 //Medium screens
 @media only screen and (min-width: 40.063em) {
   .b-text-block {
@@ -43,6 +82,14 @@
 
   .e-section-title.big{
     font-size:40px;
+    font-weight: 600;
+  }
+
+  .b-mission {
+    padding:80px 10px;
+    p{
+      font-size:1.8rem;
+    }
   }
 }
 
@@ -71,5 +118,12 @@
   .b-content-section.m-dark-panel {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .b-mission {
+    p{
+      font-size:2.4rem;
+      line-height:1.3;
+    }
   }
 }

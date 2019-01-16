@@ -1,4 +1,9 @@
 $black: #333;
+$teal: rgba(0, 120, 160, 1);
+$teal_70: rgba(0, 120, 160, .7);
+
+$red: rgba(150, 0, 0, 0.9);
+$red_70: rgba(150, 0, 0, 0.7);
 
 $primary-color: rgba(198,0,0,1);
 $primary-color_80: rgba(198,0,0,.8);
@@ -27,6 +32,7 @@ $sans-serif-font: 'Yantramanav', "HelveticaNeue-Light", "Helvetica Neue Light", 
 
 
 @mixin chizel-line {
+  padding-bottom: 2em;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   box-shadow: 0 -1px 0 rgba(0,0,0,.15) inset;
 }

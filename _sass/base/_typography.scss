@@ -1,0 +1,51 @@
+body {
+  font-family: $text-font;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $title-font;
+}
+
+.lt-ie10 {
+  h1, h2, h3, h4, h5 {
+    font-family: sans-serif;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size:1.2rem;
+  @media only screen and (max-width: 40em) {
+    font-size:1rem;
+  }
+}
+
+h1, h3 {
+  font-weight: 400;
+}
+
+h2{
+  font-weight:500
+}
+
+a {
+  color: $primary-color;
+}
+
+ul {
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 500;
+}
+
+ul strong {
+  font-weight: bold;
+}

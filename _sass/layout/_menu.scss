@@ -1,8 +1,10 @@
 .b-main-menu {
   display: block;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: solid #e0e0e0 2px;
   clear: both;
   position: relative;
-  width: 100%;
   z-index: 100;
   @media only screen and (min-width: 64.063em) {
     //overflow: hidden;
@@ -37,7 +39,7 @@
       }
     }
   }
-  
+
   .b-main-logo {
     margin: 0;
     display: table-cell;
@@ -147,7 +149,7 @@
             background-color: $gray;
             padding: 15px 5%;
           }
-          
+
           &:hover {
             color: #c60000;
           }

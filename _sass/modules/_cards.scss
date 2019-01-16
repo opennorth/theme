@@ -1,0 +1,105 @@
+.b-card {
+  margin: 0 0 30px;
+
+  .e-card-header {
+    padding: 10px 20px;
+    background-color: $primary-color;
+
+    h4 {
+      color: $white;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0;
+      text-align: center;
+      font-size: 2rem;
+      & > p {
+      	font-size: 1.125rem;
+        margin-bottom: .3rem;
+        line-height: normal;
+      }
+    }
+  }
+
+  .e-card-picture {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $gray_15;
+    text-align: right;
+  }
+
+  .e-card-content {
+    padding: 10px;
+
+    h3 {
+      font-weight: 400;
+    }
+    h4 {
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.b-card.m-team {
+  .e-card-content {
+    text-align: center;
+
+    h3 {
+      margin: 20px 0 0;
+    }
+
+    h4 {
+      margin:0;
+      p {
+      	margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#about{
+	padding-bottom:0;
+}
+
+#board {
+	margin-top: 3em;
+}
+
+.b-content-section.b-people {
+  padding-bottom: 50px; // 50px + 30px .b-card margin-bottom = 80px
+}
+
+.b-card.m-team {
+  height: 440px;
+  background-color: $white;
+  position: relative;
+}
+
+@media only screen and (max-width: 25em) {
+  .b-people .small-6 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 24em) and (max-width: 31.875em) {
+  #advisors .b-card.m-team {
+  	min-height: 510px;
+  }
+  #board .b-card.m-team {
+  	min-height: 500px;
+  }
+}
+@media screen and (min-width: 40.063em) and (max-width: 56.5625em) {
+  #advisors {
+    margin-bottom: 2em;
+  }
+  #advisors .b-card.m-team {
+  	min-height: 510px;
+  }
+  #board .b-card.m-team {
+  	min-height: 500px;
+  }
+}
