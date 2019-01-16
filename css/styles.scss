@@ -1,35 +1,27 @@
 ---
 ---
-//   Basic blocks
+// Base
 @import "variables";
 @import "vendor";
-@import "base";
-@import "cards";
-@import "social-media";
-@import "sections";
-@import "slider";
-@import "three-column";
+@import "base/typography";
+@import "base/elements";
 
-// Content blocks
-@import "footer";
-@import "menu";
-@import "news";
-@import "landing";
-@import "services";
-@import "call-to-action";
-@import "mission";
-@import "team";
-@import "logos";
-@import "blog";
+// Layout
+@import "layout/footer";
+@import "layout/menu";
+@import "layout/three-column";
+@import "layout/sections";
+@import "layout/posts";
 
+// Modular
+@import "modules/slider";
+@import "modules/cards";
+@import "modules/call-to-action";
+@import "modules/dialog";
 
-// Pages
-@import "open-cities";
+// States
 
-// Add to scss at next compile:
-
-picture {
-	max-width: 100%;
-	height: auto;
-	border: none;
-}
+// Theme
+@import "theme/social-media";
+@import "theme/logos";
+@import "theme/open-cities";
