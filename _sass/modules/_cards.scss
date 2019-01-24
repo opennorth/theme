@@ -68,6 +68,10 @@
 	margin-top: 3em;
 }
 
+@supports (display: grid) {
+   // TODO: // code that will only run if CSS Grid is supported by the browser
+ }
+
 .b-content-section.b-people {
   padding-bottom: 50px; // 50px + 30px .b-card margin-bottom = 80px
 }

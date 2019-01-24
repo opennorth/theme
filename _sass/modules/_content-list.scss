@@ -1,0 +1,142 @@
+div.impact {
+  background-color: $gray;
+}
+
+.featured-list {
+  padding: 3em 0;
+  margin-top: 2em;
+  .row {
+    @media screen and (min-width: 40.063em) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .featured-item {
+      background-color: #fff;
+      padding: 0;
+      margin: 2em;
+      box-shadow: 5px 5px 15px $gray_25;
+      @media screen and (min-width: 40.063em) {
+        display: flex;
+        flex-flow: row wrap;
+        width: 42%;
+      }
+      .content-image {
+      	width: 100%;
+      	height: 250px;
+      	background-size: cover;
+      }
+      .content-description {
+        h3 {
+          padding: 1em 0 .5em;
+        }
+        blockquote {
+          border: 0;
+          p {
+            margin: 0;
+          }
+        }
+        cite {
+          font-style: normal;
+          font-weight: 300;
+          display: inline-block;
+          padding: 0 1.875em 1.25em;
+          .emphasis {
+            font-weight: 400;
+          }
+        }
+        .anchor-link {
+          font-size: 1.175em;
+          display: block;
+          padding: 0 1.875em 1.875em;
+          &::after {
+            content: '';
+            background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 60%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 4px;
+            left: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-list {
+  padding-top: 4em;
+  ul {
+    list-style: none;
+    li {
+      padding: 1.5em 0;
+      border-bottom: 2px solid $gray_15;
+      margin-bottom: 3em;
+      h3 {
+        font-weight: 500;
+      }
+      img {
+        float: right;
+        max-width: 300px;
+        margin-left: 3em;
+      }
+      .link {
+        font-weight: 500;
+        &::after {
+          content: '';
+          background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 75%;
+          display: inline-block;
+          width: 18px;
+          height: 27px;
+          position: relative;
+          top: 8px;
+          left: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+.webinars.content-list {
+  .content-item {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $red_70;
+    margin-bottom: 3em;
+    .wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      .text {
+        width: 55%;
+        padding-right: 3em;
+      }
+      .embedded {
+        width: 45%;
+        iframe {
+          height: auto;
+          min-height: 300px;
+        }
+      }
+    }
+  }
+}
+
+// Show more section within list.
+.content-item {
+  .accordion {
+    color: $primary-color;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: max-height 0.2s ease-out;
+  }
+  .panel {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
