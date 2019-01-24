@@ -1,7 +1,3 @@
-div.impact {
-  background-color: $gray;
-}
-
 .featured-list {
   padding: 3em 0;
   margin-top: 2em;
@@ -97,11 +93,16 @@ div.impact {
   }
 }
 
+div.impact {
+  background-color: $gray;
+}
+
+
 
 .webinars.content-list {
   .content-item {
     padding-bottom: 2em;
-    border-bottom: 1px solid $red_70;
+    border-bottom: 2px solid $gray_15;
     margin-bottom: 3em;
     .wrapper {
       display: flex;
@@ -109,6 +110,9 @@ div.impact {
       .text {
         width: 55%;
         padding-right: 3em;
+        p {
+          margin-bottom: 0;
+        }
       }
       .embedded {
         width: 45%;
@@ -125,12 +129,23 @@ div.impact {
 .content-item {
   .accordion {
     color: $primary-color;
+    font-size: 1.2em;
+    font-weight: 400;
     background-color: transparent;
-    cursor: pointer;
     padding: 0;
     border: none;
+    cursor: pointer;
     outline: none;
     transition: max-height 0.2s ease-out;
+    &::before {
+      content: '';
+      background: url(/theme/img/icons/arrow-red-down.svg) no-repeat center / 75%;
+      display: inline-block;
+      width: 18px;
+      height: 27px;
+      position: relative;
+      top: 10px;
+    }
   }
   .panel {
     display: none;
@@ -138,5 +153,16 @@ div.impact {
     border: 0;
     padding: 0;
     overflow: hidden;
+  }
+}
+
+.news.content-list {
+  ul li {
+    padding: 0;
+    border-bottom: 0;
+    margin: 0;
+    .source {
+      font-style: italic;
+    }
   }
 }
