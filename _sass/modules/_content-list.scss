@@ -147,22 +147,37 @@ div.impact {
 .content-item {
   .accordion {
     color: $primary-color;
-    font-size: 1.2em;
-    font-weight: 400;
     background-color: transparent;
     padding: 0;
     border: none;
-    cursor: pointer;
+    margin: .5rem 0 1rem;
     outline: none;
-    transition: max-height 0.2s ease-out;
-    &::before {
-      content: '';
-      background: url(/theme/img/icons/arrow-red-down.svg) no-repeat center / 75%;
-      display: inline-block;
-      width: 18px;
-      height: 27px;
-      position: relative;
-      top: 10px;
+    transition: all 0.2s ease-out;
+    &::after {
+      content: 'Show More';
+      font-size: 1rem;
+      font-weight: 500;
+      background: url(/theme/img/icons/arrow-red-down.svg) no-repeat center right / 20px;
+      padding-right: 25px;
+      text-transform: uppercase;
+    }
+    &:hover,
+    &:active {
+      color: $teal;
+      &::after {
+        background-image: url(/theme/img/icons/arrow-teal-down.svg);
+      }
+    }
+    &.active::after {
+      content: 'Show Less';
+      background-image: url(/theme/img/icons/arrow-red-up.svg);
+    }
+    &:hover.active,
+    &:active.active {
+      color: $teal;
+      &::after {
+        background-image: url(/theme/img/icons/arrow-teal-up.svg);
+      }
     }
   }
   .panel {
