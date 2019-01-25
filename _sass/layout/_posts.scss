@@ -9,3 +9,32 @@
     }
   }
 }
+
+.job {
+  padding: .75em 1em .25em;
+  margin-bottom: 2em;
+  transition: all .35s ease-in-out;
+  &:hover,
+  &:active {
+    background-color: $red_70;
+  	color: $gray;
+  	transition: all .35s ease-in-out;
+  	border-radius: 2px;
+    h4 {
+      color: $gray;
+      border-bottom: 2px solid $gray;
+    }
+    p {
+      color: $gray;
+    }
+  }
+  h4 {
+    border-bottom: 2px solid #c60000;
+  	color: #c60000;
+    transition: all .35s ease-in-out;
+  }
+  p {
+    color: #222;
+    transition: all .35s ease-in-out;
+  }
+}
