@@ -1,51 +1,74 @@
+// Grid list used in impacts, publications.
 .featured-list {
+  max-width: 1200px;
   padding: 3em 0;
   margin-top: 2em;
   .row {
+    &::after,
+    &::before {
+      display: none;
+    }
     @media screen and (min-width: 40.063em) {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      max-width: 94%;
     }
     .featured-item {
       background-color: #fff;
+      width: 80%;
+      max-width: 500px;
       padding: 0;
-      margin: 2em;
-      box-shadow: 5px 5px 15px $gray_25;
-      @media screen and (min-width: 40.063em) {
-        display: flex;
-        flex-flow: row wrap;
-        width: 42%;
+      margin: 1em auto 3em auto;
+      box-shadow: 5px 5px 15px $gray_15;
+      &:hover,
+      &:active {
+        box-shadow: 5px 5px 15px $gray_25;
+        .anchor-link {
+          color: $primary-color;
+        }
       }
-      .content-image {
+      .featured-image {
       	width: 100%;
       	height: 250px;
         background-position: center top;
       	background-size: cover;
       }
-      .content-description {
+      .featured-description {
         h3 {
-          padding: 1em 0 .5em;
+          color: $primary-color;
+          padding: 1em .25em .5em;
         }
         blockquote {
           border: 0;
           p {
+            color: $font-color;
+            font-size: inherit;
             margin: 0;
           }
         }
         cite {
+          color: $font-color;
           font-style: normal;
-          font-weight: 300;
           display: inline-block;
-          padding: 0 1.875em 1.25em;
-          .emphasis {
-            font-weight: 400;
+          padding: 0 1.875em;
+          p {
+            font-size: inherit;
+            margin: 0;
+          }
+          &::before {
+            font-weight: 300;
+            position: absolute;
+            left: 14px;
           }
         }
         .anchor-link {
           font-size: 1.175em;
-          display: block;
-          padding: 0 1.875em 1.875em;
+          font-weight: 400;
+          width: 100%;
+          padding: 0 1.875em .75em;
+          position: absolute;
+          bottom: 0;
           &::after {
             content: '';
             background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 60%;
@@ -59,25 +82,42 @@
         }
       }
       &.end {
-      	margin-right: auto;
-        margin-left: 3em;
+      	//margin-right: auto;
+        //margin-left: 3em;
       }
     }
   }
 }
 
-.publications.featured-list .featured-item {
-  margin: 1em;
-  margin-bottom: 3em;
-  @media screen and (min-width: 40.063em) {
-	   width: 28%;
-   }
-  h3 {
-    font-size: 1.5em;
-    padding: 1.875em .5em 1em;
+.two-column.featured-list .featured-item {
+  @media screen and (min-width: 980px) {
+    width: 42%;
   }
 }
 
+.three-column.featured-list .featured-item {
+  @media screen and (min-width: 40.063em) {
+    width: 44%
+  }
+  @media screen and (min-width: 1025px) {
+    width: 28%;
+  }
+}
+
+// 'Featured list' background.
+div.impact,
+div.publications {
+  background-color: $gray;
+}
+
+// Padding for absolutely positioned 'learn more' text.
+div.impact .featured-list .row .featured-item {
+  padding-bottom: 90px;
+  position: relative;
+}
+
+// Content list pattern used widely throughout site.
+// Present in impacts, publications, webinars.
 .content-list {
   padding-top: 4em;
   .row > ul {
@@ -86,13 +126,23 @@
       padding: 1.5em 0;
       border-bottom: 2px solid $gray_15;
       margin-bottom: 3em;
+
       h3 {
         font-weight: 500;
+        width: 100%;
       }
       img {
         float: right;
         max-width: 300px;
-        margin-left: 3em;
+        border: 1px solid rgba(55, 55, 55, .15);
+        margin: 0 0 2em 3em;
+        box-shadow: 2px 2px 8px rgba(55, 55, 55, .15);
+      }
+      p {
+        max-width: 628px;
+      }
+      .text-right {
+        max-width: 100%;
       }
       .link {
         font-weight: 500;
@@ -106,17 +156,15 @@
           top: 8px;
           left: 5px;
         }
+        &:hover::after {
+          background-image: url(/theme/img/icons/arrow-teal-right.svg);
+        }
       }
     }
   }
 }
 
-div.impact {
-  background-color: $gray;
-}
-
-
-
+// Specific to webinar layout.
 .webinars.content-list {
   .content-item {
     padding-bottom: 2em;
@@ -143,7 +191,7 @@ div.impact {
   }
 }
 
-// Show more section within list.
+// Show more section within list (webinars).
 .content-item {
   .accordion {
     color: $primary-color;
@@ -189,6 +237,7 @@ div.impact {
   }
 }
 
+// Tweaks for newsroom content list.
 .news.content-list {
   .row > ul li {
     padding: 0;
