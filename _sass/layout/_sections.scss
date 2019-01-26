@@ -7,11 +7,16 @@
   padding-bottom:20px;
 }
 
-#impact .row:first-child,
+/*#impact .row:first-child,
 #projects .row:first-child,
 #reports .row:first-child,
 #resources .row:first-child {
   padding-top: 2em;
+}*/
+
+// Space between menu and page title.
+header + section > .row {
+	padding-top: 2em;
 }
 
 #learn-more a {
