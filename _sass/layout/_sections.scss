@@ -1,18 +1,6 @@
 .b-content-section {
-  padding-bottom: 20px;
+  padding-bottom: 3em;
 }
-
-#what-we-do,
-#expertise{
-  padding-bottom:20px;
-}
-
-/*#impact .row:first-child,
-#projects .row:first-child,
-#reports .row:first-child,
-#resources .row:first-child {
-  padding-top: 2em;
-}*/
 
 // Space between menu and page title.
 header + section > .row {
@@ -41,6 +29,7 @@ header + section > .row {
 
 .e-section-title {
   color: $black;
+  font-weight: 600;
   margin: 20px 0 40px;
   text-align: center;
 }
@@ -60,11 +49,11 @@ header + section > .row {
 }
 
 .b-mission {
-  	padding:40px 10px;
+  padding:40px 10px;
 
-  	p{
-  		margin-bottom:0;
-  	}
+  p {
+  	margin-bottom:0;
+  }
 }
 
 .col-header {
@@ -126,7 +115,7 @@ header + section > .row {
   }
 
   .b-mission {
-    p{
+    p {
       font-size:2.4rem;
       line-height:1.3;
     }
