@@ -16,6 +16,7 @@
   }
 }
 
+// Call-to-action include.
 .call-to-action {
   @include chizel-line;
   margin-bottom: 3em;
@@ -38,22 +39,13 @@
     justify-content: space-between;
     max-width: 300px;
     margin-top: 2em;
-    .fa {
-    	padding: .25em;
-    	background: grey;
-    	border-radius: 4px;
-    	color: #fff;
-    	width: 48px;
-    	height: 48px;
-      &.fa-facebook {
-        font-size: 2.54em;
-      }
+    .fab {
+      color: $gray_45;
+      font-size: 2.65em;
       &:hover,
       &:active {
-        background-color: $teal_70;
+        color: $teal_70;
       }
     }
   }
 }
-
-@screen and min-width
