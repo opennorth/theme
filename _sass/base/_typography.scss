@@ -83,3 +83,10 @@ cite + p,
 blockquote + p {
 	margin-top: 1em;
 }
+
+// Misc font awesome.
+.fas {
+  &.fa-chevron-right {
+	  font-size: 1rem;
+  }
+}
