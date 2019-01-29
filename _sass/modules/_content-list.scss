@@ -1,121 +1,3 @@
-// Grid list used in impacts, publications.
-.featured-list {
-  max-width: 1200px;
-  padding: 3em 0;
-  margin-top: 2em;
-  .row {
-    &::after,
-    &::before {
-      display: none;
-    }
-    @media screen and (min-width: 40.063em) {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      max-width: 94%;
-    }
-    .featured-item {
-      background-color: #fff;
-      width: 80%;
-      max-width: 500px;
-      padding: 0;
-      margin: 1em auto 3em auto;
-      box-shadow: 5px 5px 15px $gray_15;
-      &:hover,
-      &:active {
-        box-shadow: 5px 5px 15px $gray_25;
-        .anchor-link {
-          color: $primary-color;
-        }
-      }
-      .featured-image {
-      	width: 100%;
-      	height: 250px;
-        background-position: center top;
-      	background-size: cover;
-      }
-      .featured-description {
-        h3 {
-          color: $primary-color;
-          padding: 1em .25em .5em;
-        }
-        blockquote {
-          border: 0;
-          p {
-            color: $font-color;
-            font-size: inherit;
-            margin: 0;
-          }
-        }
-        cite {
-          color: $font-color;
-          font-style: normal;
-          display: inline-block;
-          padding: 0 1.875em;
-          p {
-            font-size: inherit;
-            margin: 0;
-          }
-          &::before {
-            font-weight: 300;
-            position: absolute;
-            left: 14px;
-          }
-        }
-        .anchor-link {
-          font-size: 1.175em;
-          font-weight: 400;
-          width: 100%;
-          padding: 0 1.875em .75em;
-          position: absolute;
-          bottom: 0;
-          &::after {
-            content: '';
-            background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 60%;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            position: relative;
-            top: 4px;
-            left: 4px;
-          }
-        }
-      }
-      &.end {
-      	//margin-right: auto;
-        //margin-left: 3em;
-      }
-    }
-  }
-}
-
-.two-column.featured-list .featured-item {
-  @media screen and (min-width: 980px) {
-    width: 42%;
-  }
-}
-
-.three-column.featured-list .featured-item {
-  @media screen and (min-width: 40.063em) {
-    width: 44%
-  }
-  @media screen and (min-width: 1025px) {
-    width: 28%;
-  }
-}
-
-// 'Featured list' background.
-div.impact,
-div.publications {
-  background-color: $gray;
-}
-
-// Padding for absolutely positioned 'learn more' text.
-div.impact .featured-list .row .featured-item {
-  padding-bottom: 90px;
-  position: relative;
-}
-
 // Content list pattern used widely throughout site.
 // Present in impacts, publications, webinars.
 .content-list {
@@ -246,5 +128,147 @@ div.impact .featured-list .row .featured-item {
     .source {
       font-style: italic;
     }
+  }
+}
+
+// Grid list used in impacts, publications.
+.featured-list {
+  max-width: 1200px;
+  padding: 3em 0;
+  margin-top: 2em;
+  .row {
+    &::after,
+    &::before {
+      display: none;
+    }
+    @media screen and (min-width: 40.063em) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      max-width: 94%;
+    }
+    .featured-item {
+      background-color: #fff;
+      width: 80%;
+      max-width: 500px;
+      padding: 0;
+      margin: 1em auto 3em auto;
+      box-shadow: 5px 5px 15px $gray_15;
+      &:hover,
+      &:active {
+        box-shadow: 5px 5px 15px $gray_25;
+        .anchor-link {
+          color: $primary-color;
+        }
+      }
+      .featured-image {
+      	width: 100%;
+      	height: 250px;
+        background-position: center top;
+      	background-size: cover;
+      }
+      .featured-description {
+        h3 {
+          color: $primary-color;
+          padding: 1em .25em .5em;
+        }
+        blockquote {
+          border: 0;
+          p {
+            color: $font-color;
+            font-size: inherit;
+            margin: 0;
+          }
+        }
+        cite {
+          color: $font-color;
+          font-style: normal;
+          display: inline-block;
+          padding: 0 1.875em;
+          p {
+            font-size: inherit;
+            margin: 0;
+          }
+          &::before {
+            font-weight: 300;
+            position: absolute;
+            left: 14px;
+          }
+        }
+        .anchor-link {
+          font-size: 1.175em;
+          font-weight: 400;
+          width: 100%;
+          padding: 0 1.875em .75em;
+          position: absolute;
+          bottom: 0;
+          &::after {
+            content: '';
+            background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 60%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 4px;
+            left: 4px;
+          }
+        }
+      }
+      &.end {
+      	//margin-right: auto;
+        //margin-left: 3em;
+      }
+    }
+  }
+}
+
+.two-column.featured-list .featured-item {
+  @media screen and (min-width: 980px) {
+    width: 42%;
+  }
+}
+
+.three-column.featured-list .featured-item {
+  @media screen and (min-width: 40.063em) {
+    width: 44%
+  }
+  @media screen and (min-width: 1025px) {
+    width: 28%;
+  }
+}
+
+// 'Featured list' background.
+.background-subtle {
+  background-color: $gray;
+  background-color: $teal_20;
+}
+
+// Padding for absolutely positioned 'learn more' text.
+div.impact .featured-list .row .featured-item {
+  padding-bottom: 90px;
+  position: relative;
+}
+
+// Blog page list.
+.b-blog.featured-list {
+  .blog-item {
+    width: 100%;
+    max-width: 1000px;
+    padding: 1.25em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  time {
+    display: block;
+    color: $gray_60;
+    font-size: 1rem;
+  }
+  p {
+    max-width: 700px;
+  }
+  img {
+    width: 200px;
+    margin: 0 1.25em 1em 1em;
+    float: right;
   }
 }
