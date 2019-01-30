@@ -16,9 +16,9 @@
       img {
         float: right;
         max-width: 300px;
-        border: 1px solid rgba(55, 55, 55, .15);
+        //border: .5px solid rgba(155, 155, 155, 0.1);
         margin: 0 0 2em 3em;
-        box-shadow: 2px 2px 8px rgba(55, 55, 55, .15);
+        box-shadow: 1px 1px 6px rgba(155, 155, 155, 0.15);
       }
       p {
         max-width: 628px;
@@ -152,11 +152,15 @@
       width: 80%;
       max-width: 500px;
       padding: 0;
+      border: 0;
       margin: 1em auto 3em auto;
-      box-shadow: 5px 5px 15px $gray_15;
+      //box-shadow: 5px 5px 15px $gray_15;
+      transition: border 0.3s;
       &:hover,
       &:active {
-        box-shadow: 5px 5px 15px $gray_25;
+        border: 6px solid $red;
+        transition: border .03s;
+        //box-shadow: 5px 5px 15px $gray_25;
         .anchor-link {
           color: $primary-color;
         }
@@ -170,7 +174,7 @@
       .featured-description {
         h3 {
           color: $primary-color;
-          padding: 1em .25em .5em;
+          padding: 1em .5em .5em;
         }
         blockquote {
           border: 0;
@@ -241,6 +245,7 @@
 .background-subtle {
   background-color: $gray;
   background-color: $teal_20;
+  background-color: rgba(150,150,150,0.1);
 }
 
 // Padding for absolutely positioned 'learn more' text.
@@ -250,25 +255,36 @@ div.impact .featured-list .row .featured-item {
 }
 
 // Blog page list.
-.b-blog.featured-list {
-  .blog-item {
-    width: 100%;
-    max-width: 1000px;
-    padding: 1.25em;
-    margin-left: auto;
-    margin-right: auto;
+.featured-list .row .blog-item {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover,
+  &:active {
+    border: 0;
+  }
+  h3 {
+  	padding: 1.25rem 0 0 1.25rem;
   }
   time {
     display: block;
     color: $gray_60;
     font-size: 1rem;
+    font-weight: 300;
+    width: 66%;
+    margin-bottom: .5rem;
+    padding-left: 1.25rem;
   }
   p {
     max-width: 700px;
+    padding-left: 1rem;
   }
   img {
-    width: 200px;
-    margin: 0 1.25em 1em 1em;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 1em;
     float: right;
   }
 }

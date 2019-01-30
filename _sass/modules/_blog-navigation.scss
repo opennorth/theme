@@ -1,0 +1,60 @@
+.page-navigation-arrow {
+  position: fixed;
+  top: 88%;
+  right: .5em;
+  z-index: 100;
+}
+
+.pagination {
+  text-align: right;
+  & > span {
+    display: none;
+  }
+  & > em {
+    font-style: normal;
+  }
+  & > * {
+    font-size: 1.25em;
+    padding: .25em;
+  }
+}
+
+.post-navigation {
+	margin-top: 3em;
+  p {
+    font-weight: 400;
+    &::after {
+      content: '';
+      background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 52%;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 4px;
+      left: 2px;
+    }
+    &:hover,
+    &:active {
+      &::after {
+        background-image: url(/theme/img/icons/arrow-teal-right.svg);
+      }
+    }
+    &.next::after {
+      display: none;
+    }
+  }
+  p.next::before {
+    content: "";
+    background: url(/theme/img/icons/arrow-red-left.svg) no-repeat center / 52%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+  }
+  p.next:hover::before,
+  p.next:hover::before {
+    background-image: url(/theme/img/icons/arrow-teal-left.svg);
+  }
+}
