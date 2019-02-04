@@ -4,43 +4,46 @@
   padding-top: 4em;
   .row > ul {
     list-style: none;
-    & > li {
-      padding: 1.5em 0;
-      border-bottom: 2px solid $gray_15;
-      margin-bottom: 3em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .row > ul > li,
+  .row > div {
+    //padding: 1.5em 0;
+    border-bottom: 2px solid $gray_15;
+    margin-bottom: 3em;
 
-      h3 {
-        font-weight: 500;
-        width: 100%;
+    h3 {
+      font-weight: 500;
+      width: 100%;
+    }
+    img {
+      float: right;
+      max-width: 300px;
+      //border: .5px solid rgba(155, 155, 155, 0.1);
+      margin: 0 0 2em 3em;
+      box-shadow: 1px 1px 6px rgba(155, 155, 155, 0.15);
+    }
+    p {
+      max-width: 628px;
+    }
+    .text-right {
+      max-width: 100%;
+    }
+    .link {
+      font-weight: 500;
+      &::after {
+        content: '';
+        background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 75%;
+        display: inline-block;
+        width: 18px;
+        height: 27px;
+        position: relative;
+        top: 8px;
+        left: 5px;
       }
-      img {
-        float: right;
-        max-width: 300px;
-        //border: .5px solid rgba(155, 155, 155, 0.1);
-        margin: 0 0 2em 3em;
-        box-shadow: 1px 1px 6px rgba(155, 155, 155, 0.15);
-      }
-      p {
-        max-width: 628px;
-      }
-      .text-right {
-        max-width: 100%;
-      }
-      .link {
-        font-weight: 500;
-        &::after {
-          content: '';
-          background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 75%;
-          display: inline-block;
-          width: 18px;
-          height: 27px;
-          position: relative;
-          top: 8px;
-          left: 5px;
-        }
-        &:hover::after {
-          background-image: url(/theme/img/icons/arrow-teal-right.svg);
-        }
+      &:hover::after {
+        background-image: url(/theme/img/icons/arrow-teal-right.svg);
       }
     }
   }
@@ -53,24 +56,37 @@
     border-bottom: 2px solid $gray_15;
     margin-bottom: 3em;
     .wrapper {
-      display: flex;
-      flex-flow: row nowrap;
-      .text {
-        width: 55%;
-        padding-right: 3em;
-        p {
-          margin-bottom: 0;
+      @media screen and (min-width: 800px) {
+        display: flex;
+        flex-flow: row nowrap;
+        .text {
+          width: 55%;
+        }
+        .embedded {
+          width: 45%;
         }
       }
+      .text {
+        padding-right: 3em;
+      }
       .embedded {
-        width: 45%;
         iframe {
           height: auto;
+          max-width: 500px;
           min-height: 300px;
+          margin: 2em auto 0;
         }
       }
     }
+    p {
+      max-width: none;
+    }
   }
+}
+
+p > br,
+li > br {
+	margin-bottom: .75rem;
 }
 
 // Show more section within list (webinars).
@@ -121,6 +137,7 @@
 
 // Tweaks for newsroom content list.
 .news.content-list {
+  padding-top: 0;
   .row > ul li {
     padding: 0;
     border-bottom: 0;
@@ -154,13 +171,14 @@
       padding: 0;
       border: 0;
       margin: 1em auto 3em auto;
-      //box-shadow: 5px 5px 15px $gray_15;
-      transition: border 0.3s;
+      box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+      transition: transform 400ms cubic-bezier(.165,.84,.44,1);
       &:hover,
       &:active {
-        border: 6px solid $red;
-        transition: border .03s;
-        //box-shadow: 5px 5px 15px $gray_25;
+        //border: 6px solid $red;
+        //transition: border .03s;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+        transform: scale(1.035);
         .anchor-link {
           color: $primary-color;
         }
@@ -227,7 +245,7 @@
 }
 
 .two-column.featured-list .featured-item {
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 800px) {
     width: 42%;
   }
 }
@@ -243,9 +261,7 @@
 
 // 'Featured list' background.
 .background-subtle {
-  background-color: $gray;
-  background-color: $teal_20;
-  background-color: rgba(150,150,150,0.1);
+  background-color: #f6f6f4;
 }
 
 // Padding for absolutely positioned 'learn more' text.
@@ -256,35 +272,44 @@ div.impact .featured-list .row .featured-item {
 
 // Blog page list.
 .featured-list .row .blog-item {
-  width: 100%;
+  width: 98%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   &:hover,
   &:active {
-    border: 0;
+    transform: scale(1.02);
   }
-  h3 {
-  	padding: 1.25rem 0 0 1.25rem;
-  }
-  time {
-    display: block;
-    color: $gray_60;
-    font-size: 1rem;
-    font-weight: 300;
-    width: 66%;
-    margin-bottom: .5rem;
-    padding-left: 1.25rem;
-  }
-  p {
-    max-width: 700px;
-    padding-left: 1rem;
-  }
-  img {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    margin-left: 1em;
-    float: right;
+  article {
+    display: flex;
+    h3 {
+      color: $primary-color;
+    	padding: 1.25rem 1.25rem 0;
+      margin: 0;
+    }
+    time {
+      display: block;
+      color: $gray_60;
+      font-size: 1rem;
+      font-weight: 300;
+      width: 66%;
+      margin-bottom: .5rem;
+      padding-left: 1.25rem;
+    }
+    p {
+      color: #444;
+      font-size: 1.125rem;
+      margin: 0 1rem 1rem;
+    }
+    .post-text {
+      width: 70%;
+    }
+    .post-image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 30%;
+      margin-left: 1rem;
+    }
   }
 }
