@@ -52,6 +52,16 @@ $sans-serif-font: 'Yantramanav', "HelveticaNeue-Light", "Helvetica Neue Light", 
   box-shadow: 0 4px 10px $gray_25 inset;
 }
 
+@mixin arrow-icon($image) {
+  content: '';
+  background: url($image) no-repeat center / 60%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
 
 //
 @mixin border-radius($rad) {
