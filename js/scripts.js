@@ -129,13 +129,13 @@ $(function () {
 });
 
 
-// Scroll to next section / scroll to top BUTTONS
+// Scroll to top button
 var lastScrollTop = 0;
 $(window).on('scroll', function() {
     st = $(this).scrollTop();
     if(st < lastScrollTop) {
         // show up arrow button
-        document.getElementById("pageDown").style.display = "none";
+      //  document.getElementById("pageDown").style.display = "none";
         document.getElementById("pageUp").style.display = "block";
 
         // on click, scroll to top
@@ -145,7 +145,7 @@ $(window).on('scroll', function() {
     else {
         // show down arrow button
         document.getElementById("pageUp").style.display = "none";
-        document.getElementById("pageDown").style.display = "block";
+      //  document.getElementById("pageDown").style.display = "block";
 
         // on click, scroll to next section
 
@@ -158,8 +158,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   document.getElementById("pageUp").style.display = "none";
-}
-
-function downFunction() {
-  $('body').scrollTo(500);
 }

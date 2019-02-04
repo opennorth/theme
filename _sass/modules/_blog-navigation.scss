@@ -3,19 +3,43 @@
   top: 88%;
   right: .5em;
   z-index: 100;
+  &:focus {
+    background-color: $red_70;
+  }
 }
 
 .pagination {
   text-align: right;
   & > span {
-    display: none;
+    //display: none;
   }
   & > em {
+    color: #555;
     font-style: normal;
   }
   & > * {
     font-size: 1.25em;
     padding: .25em;
+  }
+
+  .prev::before {
+    @include arrow-icon('/theme/img/icons/arrow-red-left.svg');
+  }
+  .prev:hover,
+  .prev:active{
+    &::before {
+      @include arrow-icon('/theme/img/icons/arrow-teal-left.svg');
+    }
+  }
+
+  .next::after {
+    @include arrow-icon('/theme/img/icons/arrow-red-right.svg');
+  }
+  .next:hover,
+  .next:active {
+    &::after{
+      @include arrow-icon('/theme/img/icons/arrow-teal-right.svg');
+    }
   }
 }
 
