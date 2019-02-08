@@ -2,9 +2,34 @@
   padding-bottom: 3em;
 }
 
-// Space between menu and page title.
-header + section > .row {
-	padding-top: 2em;
+.b-title-section {
+	padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  .e-page-title {
+    color: $black;
+    font-weight: 600;
+    margin: 20px 0 40px;
+    text-align: center;
+  }
+  p.text-center {
+    color: $black;
+  	font-size: 1.35em;
+  	font-weight: 400;
+  	margin-bottom: 2em;
+    @media screen and (min-width: 40.063em) {
+      font-size: 1.15em;
+    }
+  }
+}
+
+.b-content-section {
+  .minor-subheading {
+    font-size: 1.65em;
+    font-weight: 400;
+  }
+  .minor-subheading + .subheading {
+    margin-top: 1em;
+  }
 }
 
 #learn-more a {
