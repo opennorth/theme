@@ -130,6 +130,7 @@ $(function () {
 
 
 // Scroll to top button
+// Display up / down button depending on scroll direction.
 var lastScrollTop = 0;
 $(window).on('scroll', function() {
     st = $(this).scrollTop();
@@ -144,7 +145,7 @@ $(window).on('scroll', function() {
     }
     else {
         // show down arrow button
-        document.getElementById("pageUp").style.display = "none";
+      //  document.getElementById("pageUp").style.display = "none";
       //  document.getElementById("pageDown").style.display = "block";
 
         // on click, scroll to next section

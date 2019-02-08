@@ -3,8 +3,17 @@
   top: 88%;
   right: .5em;
   z-index: 100;
+  opacity: .65;
+  transition: opacity 3ms ease-out;
+  &:hover,
+  &:active {
+    opacity: .9;
+  }
   &:focus {
     background-color: $red_70;
+  }
+  @media screen and (min-width: 1160px) {
+    right: calc((100vw - 1115px) / 2 );
   }
 }
 
