@@ -37,7 +37,7 @@ h2 {
 
 .subheading {
   font-weight: 600;
-  margin: 2em 0 1em;
+  margin: 2em 0 1rem;
 }
 
 a {
@@ -58,7 +58,25 @@ ul strong {
 
 blockquote {
   padding-bottom: .5em;
+  border: 0;
   margin-bottom: 0;
+  position: relative;
+  &::before {
+    content: '\1F676';
+    color: #888;
+    font-size: 2em;
+    position: absolute;
+    top: -.15rem;
+    left: -.5rem;
+  }
+  &::after {
+    content: '\1F677';
+    color: #888;
+    font-size: 2em;
+    position: absolute;
+    bottom: -.75rem;
+    right: 0;
+  }
 }
 
 dl dt,
