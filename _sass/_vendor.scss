@@ -8,7 +8,11 @@
   position:relative;
 }
 .unslider-wrap.unslider-carousel>li {
+  max-height: 600px;
   float:left;
+}
+.unslider-wrap.unslider-carousel .display-table .display-cell {
+  vertical-align: unset;
 }
 .unslider-vertical>ul {
   height:100%;
@@ -66,4 +70,3 @@
   background: #fff;
   cursor: default;
 }
-
