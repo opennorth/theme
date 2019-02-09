@@ -56,25 +56,20 @@
 	margin-top: 3em;
   p {
     font-weight: 400;
-    &::after {
-      content: '';
-      background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 52%;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      top: 4px;
-      left: 2px;
-    }
-    &:hover,
-    &:active {
-      &::after {
-        background-image: url(/theme/img/icons/arrow-teal-right.svg);
-      }
-    }
-    &.next::after {
-      display: none;
-    }
+  }
+  p.previous::after {
+    content: '';
+    background: url(/theme/img/icons/arrow-red-right.svg) no-repeat center / 52%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+  }
+  p.previous:hover::after,
+  p.previous:active::after {
+    background-image: url(/theme/img/icons/arrow-teal-right.svg);
   }
   p.next::before {
     content: "";
