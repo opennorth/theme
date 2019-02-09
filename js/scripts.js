@@ -129,8 +129,29 @@ $(function () {
 });
 
 
+
+
 // Scroll to top button
+
+// When the user scrolls down 80px from the top of the document, display the 'back to top' button.
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    document.getElementById("pageUp").style.display = "block";
+  } else {
+    document.getElementById("pageUp").style.display = "none";
+  }
+}
+
+// Button - return to top.
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Display up / down button depending on scroll direction.
+/*
 var lastScrollTop = 0;
 $(window).on('scroll', function() {
     st = $(this).scrollTop();
@@ -153,10 +174,4 @@ $(window).on('scroll', function() {
         console.log('down 1');
     }
     lastScrollTop = st;
-});
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  document.getElementById("pageUp").style.display = "none";
-}
+});*/
