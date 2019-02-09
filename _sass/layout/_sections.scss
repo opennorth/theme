@@ -13,11 +13,11 @@
   }
   p.text-center {
     color: $black;
-  	font-size: 1.35em;
+    font-size: 1.15em;
   	font-weight: 400;
   	margin-bottom: 2em;
     @media screen and (min-width: 40.063em) {
-      font-size: 1.15em;
+      font-size: 1.35em;
     }
   }
 }

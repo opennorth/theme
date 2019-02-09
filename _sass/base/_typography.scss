@@ -61,6 +61,9 @@ blockquote {
   border: 0;
   margin-bottom: 0;
   position: relative;
+}
+
+.b-content-section blockquote {
   &::before {
     content: '\1F676';
     color: #888;
