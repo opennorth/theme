@@ -135,6 +135,17 @@ li > br {
   }
 }
 
+.webinars-fr .content-item {
+  .accordion {
+    &::after {
+      content: 'Afficher plus';
+    }
+    &.active::after {
+      content: 'Afficher moins';
+    }
+  }
+}
+
 // Tweaks for newsroom content list.
 .news.content-list {
   padding-top: 0;
