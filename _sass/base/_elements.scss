@@ -31,8 +31,17 @@ section {
 }
 
 // BUTTONS
-.button,
-button {
+.button {
+  background-color: transparent; // reset foundations button style.
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.button a,
+button,
+input.button {
   color: $white;
   font-family: $text-font;
   font-size: 1.4rem;
@@ -50,7 +59,7 @@ button {
   }
 }
 
-.button.important,
+.button.important a,
 button.important {
   background-color: $teal_70;
   &:hover,
@@ -62,6 +71,13 @@ button.important {
 
 .button.text-center,
 .button.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button.text-center a,
+.button.center a {
   display: block;
   min-width: 200px;
   max-width: 320px;
