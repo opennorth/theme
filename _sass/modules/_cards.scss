@@ -60,6 +60,20 @@
   }
 }
 
+// Banner box
+.b-content-section.banner-card {
+  .banner {
+    border: 2px solid $red_70;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  .row.box {
+    border: 2px solid $red_70;
+    border-top: 0;
+    padding-top: 1em;
+  }
+}
+
 #about{
 	padding-bottom:0;
 }
