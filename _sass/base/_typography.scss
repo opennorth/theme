@@ -82,6 +82,15 @@ blockquote {
   }
 }
 
+html[lang="fr"] .b-content-section blockquote {
+  &::before {
+    content: '\00AB';
+  }
+  &::after {
+    content: '\00BB';
+  }
+}
+
 dl dt,
 dl dd,
 ul li {
