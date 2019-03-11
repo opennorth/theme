@@ -48,11 +48,13 @@ strong {
   font-weight: 600;
 }
 
-ul {
+ul,
+ol {
   font-weight: 300;
 }
 
-ul strong {
+ul strong,
+ol strong {
   font-weight: bold;
 }
 
@@ -98,7 +100,8 @@ ul li {
 }
 
 dl dd,
-ul li {
+ul li,
+ol li {
 	font-weight: 300;
 }
 
