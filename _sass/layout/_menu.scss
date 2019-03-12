@@ -140,6 +140,7 @@
           top: 70px;
           @include transition(400ms ease max-height);
           width: 155%;
+          min-width: 200px;
         }
 
         li {
