@@ -294,16 +294,21 @@ li > br {
       width: 45%;
     }
     article {
+      height: 328px;
       h3 {
         padding-bottom: .25em;
       }
+      .post-text {
+        width: 100%;
+      }
       .post-image {
-        width: 45%;
-        margin-left: 0;
+        //width: 45%;
+      //margin-left: 0;
       }
     }
   }
 }
+
 
 .featured-list p.navigation {
   font-weight: 400;
