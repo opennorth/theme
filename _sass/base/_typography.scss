@@ -40,6 +40,15 @@ h2 {
   font-weight:500
 }
 
+// Headings w/in articles
+article h2:not(.e-page-title) {
+	font-size: 1.5em;
+}
+
+article h3 {
+  font-size: 1.35em;
+}
+
 .subheading {
   font-weight: 600;
   margin: 2em 0 1rem;
