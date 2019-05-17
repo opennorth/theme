@@ -62,39 +62,46 @@
 
 
 // Project team cards.
-.team-unit .column.team {
-	float: none;
-	display: flex;
-	flex-flow: row wrap;
+.team-unit {
   padding-top: 2em;
-  & > .columns {
-  	width: 100%;
-  	float: none;
+  max-width: 1200px;
+  .row {
+    max-width: 72.5rem; // 1200px
   }
-  .b-card.has-bio {
-    height: inherit;
-    .e-card-picture {
-      height: 200px;
-      max-width: 250px;
-      margin-right: auto;
-      margin-left: auto;
+  .column.team {
+  	float: none;
+  	display: flex;
+  	flex-flow: row wrap;
+    padding-top: 2em;
+    & > .columns {
+    	width: 100%;
+    	float: none;
     }
-    .e-card-content {
-      h3 {
-        font-size: 1.4em;
-        margin-top: .25em;
+    .b-card.has-bio {
+      height: inherit;
+      .e-card-picture {
+        height: 200px;
+        max-width: 250px;
+        margin-right: auto;
+        margin-left: auto;
       }
-      h4,
-      h4 p {
-        font-size: 1em;
-        line-height: 1.25;
-      }
-      .bio {
-        font-size: .95em;
-        padding-top: .25em;
-        border-top: .5px solid $gray_15;
-        margin-top: .25em;
-        line-height: 1.25;
+      .e-card-content {
+        h3 {
+          font-size: 1.4em;
+          margin-top: .25em;
+        }
+        h4,
+        h4 p {
+          font-size: 1em;
+          line-height: 1.25;
+        }
+        .bio {
+          font-size: .95em;
+          padding-top: .25em;
+          border-top: .5px solid $gray_15;
+          margin-top: .25em;
+          line-height: 1.25;
+        }
       }
     }
   }
