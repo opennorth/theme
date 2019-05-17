@@ -60,8 +60,66 @@
   }
 }
 
+
+// Project team cards.
+.team-unit .column.team {
+	float: none;
+	display: flex;
+	flex-flow: row wrap;
+  padding-top: 2em;
+  & > .columns {
+  	width: 50%;
+  	float: none;
+  }
+  .b-card.has-bio {
+    height: inherit;
+    .e-card-picture {
+      height: 200px;
+    }
+    .e-card-content {
+      h3 {
+        font-size: 1.4em;
+        margin-top: .25em;
+      }
+      h4,
+      h4 p {
+        font-size: 1em;
+        line-height: 1.25;
+      }
+      .bio {
+        font-size: .95em;
+        padding-top: .25em;
+        border-top: .5px solid $gray_15;
+        margin-top: .25em;
+        line-height: 1.25;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .team-unit .column.team > .columns {
+    	width: 33.3%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+  .team-unit .column.team > .columns {
+    	width: 25%;
+    }
+}
+
+@media screen and (min-width: 980px) {
+  .team-unit .column.team > .columns {
+    	width: 20%;
+    }
+}
+
+
 // Banner box
 .b-content-section.banner-card {
+  padding-right: 1em;
+  padding-left: 1em;
   .banner {
     border: 2px solid $red_70;
     border-bottom: 0;
@@ -76,6 +134,7 @@
     padding-top: 1em;
   }
 }
+
 
 #about{
 	padding-bottom:0;
