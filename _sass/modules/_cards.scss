@@ -64,9 +64,9 @@
 // Project team cards.
 .team-unit {
   padding-top: 2em;
-  max-width: 1200px;
+  max-width: 1600px;
   .row {
-    max-width: 72.5rem; // 1200px
+    max-width: 100rem; // 1200px
   }
   .column.team {
   	float: none;
@@ -108,25 +108,25 @@
   }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 650px) {
   .team-unit .column.team > .columns {
     	width: 50%;
     }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 980px) {
   .team-unit .column.team > .columns {
     	width: 33.3%;
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1080px) {
   .team-unit .column.team > .columns {
     	width: 25%;
     }
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1400px) {
   .team-unit .column.team > .columns {
     	width: 20%;
     }
