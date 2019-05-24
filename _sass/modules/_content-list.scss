@@ -172,6 +172,9 @@ li > br {
     &::before {
       display: none;
     }
+    .column {
+      float: none;
+    }
     @media screen and (min-width: 40.063em) {
       display: flex;
       flex-flow: row wrap;
@@ -343,8 +346,9 @@ div.impact .featured-list .row .featured-item {
   &:active {
     transform: scale(1.02);
   }
-  article {
+  article > a {
     display: flex;
+    flex-flow: column-reverse nowrap;
     h3 {
       color: $primary-color;
     	padding: 1.25rem 1.25rem 0;
@@ -365,14 +369,24 @@ div.impact .featured-list .row .featured-item {
       margin: 0 1rem 1rem;
     }
     .post-text {
-      width: 70%;
+      width: 100%;
     }
     .post-image {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      width: 30%;
-      margin-left: 1rem;
+      width: 100%;
+      min-height: 150px;
+    }
+    @media screen and (min-width: 40.063em) {
+      flex-flow: row nowrap;
+      .post-text {
+        width: 70%;
+      }
+      .post-image {
+        width: 30%;
+        margin-left: 1rem;
+      }
     }
   }
 }
