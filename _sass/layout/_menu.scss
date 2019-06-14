@@ -104,10 +104,12 @@
     }
 
     ul {
-      display: inline-block;
-      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
       margin: 0;
       padding: 0;
+      list-style: none;
+      white-space: nowrap;
       @media only screen and (max-width:1025px) {
         display: block;
         width: 100%;
@@ -131,16 +133,18 @@
         text-align: center;
         min-width: 150px;
         @media only screen and (min-width:1026px) {
-          left: 0;
-          max-height: 0;
-          overflow: hidden;
-          padding-top: 23px;
-          position: absolute;
-          text-align: left;
-          top: 70px;
-          @include transition(400ms ease max-height);
+          display: inline-block;
           width: 155%;
-          min-width: 200px;
+          min-width: 222px;
+          max-height: 0;
+          padding-top: 23px;
+          text-align: left;
+          white-space: normal;
+          position: absolute;
+          left: 0;
+          top: 70px;
+          overflow: hidden;
+          @include transition(400ms ease max-height);
         }
 
         li {
