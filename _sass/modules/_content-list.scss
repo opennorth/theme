@@ -346,7 +346,8 @@ div.impact .featured-list .row .featured-item {
   &:active {
     transform: scale(1.02);
   }
-  article.applied-research-lab {
+  article.applied-research-lab,
+  article.laboratoire-de-recherche-appliquee {
     position: relative;
     &::before {
     	content: '';
