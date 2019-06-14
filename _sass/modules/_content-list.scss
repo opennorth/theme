@@ -338,13 +338,25 @@ div.impact .featured-list .row .featured-item {
 
 // Blog page list.
 .featured-list .row .blog-item {
-  width: 98%;
+  width: 90%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   &:hover,
   &:active {
     transform: scale(1.02);
+  }
+  article.applied-research-lab {
+    position: relative;
+    &::before {
+    	content: '';
+    	background: linear-gradient(45deg, rgba(255, 255, 255, 0) 25%, $primary-color 25%), linear-gradient(315deg, rgba(255, 255, 255, 0) 25%, $primary-color 25%);
+      width: 1.125rem;
+      height: 4rem;
+      position: absolute;
+      left: .5rem;
+      opacity: .8;
+    }
   }
   article > a {
     display: flex;
@@ -376,12 +388,13 @@ div.impact .featured-list .row .featured-item {
       background-position: center;
       background-size: cover;
       width: 100%;
-      min-height: 150px;
+      min-height: 200px;
     }
     @media screen and (min-width: 40.063em) {
       flex-flow: row nowrap;
       .post-text {
         width: 70%;
+        padding: .5rem 0 .5rem 1.25rem;
       }
       .post-image {
         width: 30%;
