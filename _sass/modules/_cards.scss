@@ -194,9 +194,23 @@
   }
 }
 
+// 1-2-1 advisors section
+#advisors {
+  max-width: 1025px;
+}
+
+#advisors .b-card .e-card-picture {
+  background-position: 50% 25%;
+}
+#advisors .column.team > .columns {
+  width: 50%;
+}
+
+
+
 // 4 x 4 grid for 1-2-1 advisors page
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 40.063em) {
   #advisors .columns {
-    flex-basis: 25%;
+    flex-basis: 50%;
   }
 }
