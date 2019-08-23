@@ -21,13 +21,22 @@ picture {
 
 img.center {
   display: block;
-  margin: 1.25rem auto;
+  margin: 1.25rem auto .5rem;
 }
 
 section {
   max-width: 1025px;
   margin-left: auto;
   margin-right: auto;
+}
+
+figcaption {
+  color: #444;
+  font-family: $text-font;
+  font-weight: 300;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 // BUTTONS
